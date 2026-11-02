@@ -2,11 +2,11 @@
 
 **Xenoblade Chronicles 2 — Native PC Recompilation**
 
-[English](#english) · [繁體中文](#繁體中文) · [Roadmap / 路線圖](ROADMAP.md)
+[English](#english) · [简体中文](#简体中文) · [Roadmap / 路线图](ROADMAP.md)
 
 > [!NOTE]
 > This repository contains documentation only. It provides no builds, no downloads and no game files.
-> 本倉庫只有說明文件，不提供任何建置成品、下載或遊戲檔案。
+> 本仓库只有说明文件，不提供任何构建产物、下载或游戏文件。
 
 <p align="center">
   <img src="docs/images/settings-main.webp" width="49%" alt="Settings screen">
@@ -14,7 +14,7 @@
   <img src="docs/images/settings-frame-generation.webp" width="49%" alt="Settings screen">
   <img src="docs/images/settings-hdr.webp" width="49%" alt="Settings screen">
 </p>
-<p align="center"><em>Settings screen ・ 設定畫面</em></p>
+<p align="center"><em>Settings screen ・ 设定画面</em></p>
 
 ---
 
@@ -32,6 +32,47 @@ not a Yuzu / Ryujinx bundle.
 - **You need your own game:** playing requires a copy of the game that you own and have legally dumped yourself.
 - **No game content here:** this project does not include or distribute any game content, keys or decryption
   tools, and it does not explain how to dump or decrypt a game.
+
+### Acknowledgements & Project Direction
+
+First and foremost, I would like to express my sincere appreciation to **TheMonadoGuy, the creator of the Monado project**.
+
+Monado's achievements in bringing Nintendo Switch games natively to PC have been a genuine source of inspiration for me.
+
+I understand that TheMonadoGuy is also working on a PC version of Xenoblade Chronicles 2.
+
+I would like to make one thing clear: **XC2-Recomp was not created with the intention of directly competing with Monado or its author.**
+
+This project follows its own development direction, with a particular focus on the needs of Chinese-speaking players, including Chinese-language compatibility, regional game-version support, usability, and PC-oriented enhancements.
+
+I am also looking forward to seeing TheMonadoGuy's upcoming XC2 project.
+
+If the opportunity arises, I would be very happy to exchange ideas or collaborate. Should the author choose to make the relevant work available under suitable terms, I would also welcome the opportunity to contribute to or build upon it, with the author's permission and in accordance with its licensing conditions.
+
+Whether our projects remain independent or eventually find opportunities to collaborate, I hope they can contribute to each other's progress and ultimately provide a better Xenoblade Chronicles 2 experience for players.
+
+My sincere thanks again to TheMonadoGuy for the inspiration and contributions.
+
+#### Technical Acknowledgements
+
+XC2-Recomp uses or has learned from the following open-source projects. Each keeps its own license.
+
+| Project | License | Role |
+|---|---|---|
+| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp) (Wonder runtime) by BelmanteGu | MIT | Base of the recompiler and runtime |
+| Ryujinx shader translator (`Ryujinx.Graphics.Shader`), Ryujinx Team and Contributors | MIT | Shader translation |
+| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT | Runtime components |
+| [LASRecomp](https://github.com/peiikai/LASRecomp) and [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT | Runtime components |
+| AMD FidelityFX Super Resolution (FSR) | FSR 1: MIT; FidelityFX SDK: AMD's FidelityFX SDK license | Upscaling and frame generation |
+| SMAA (Jorge Jimenez et al.) | MIT | Anti-aliasing |
+| NVIDIA Streamline SDK | MIT (the DLSS components are NVIDIA's own and are not included) | NVIDIA DLSS and Reflex integration |
+| FFmpeg | LGPL-2.1-or-later | Video decoding; linked dynamically and not included |
+| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT | Approaches studied for reference; concepts only, no code copied |
+| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT | Approaches studied for reference; concepts only, no code copied |
+| xc3_lib, xenomods | MIT | File format and game structure reference; no code copied |
+
+No GPL-licensed code is included; GPL projects were consulted for behaviour only. No leaked or confidential SDK
+material is used.
 
 ### Goals
 
@@ -107,81 +148,121 @@ No license has been chosen yet.
 
 ---
 
-## 繁體中文
+## 简体中文
 
-### 專案簡介
+### 项目简介
 
-XC2-Recomp 是 Nintendo Switch 版《異度神劍2》的 Windows 原生移植，採用靜態重新編譯：遊戲的 AArch64 機器碼
-預先轉譯，建置成 x86-64 的 Windows 程式；遊戲呼叫的系統、圖形與音訊服務則以原生方式重新實作。本專案不是
-模擬器，也不是 Yuzu／Ryujinx 整合包。
+XC2-Recomp 是 Nintendo Switch 版《异度神剑 2》的 Windows 原生移植，采用静态重编译：游戏的 AArch64 机器码
+预先转译，构建为 x86-64 的 Windows 程序；游戏调用的系统、图形与音频服务则以原生方式重新实现。本项目不是
+模拟器，也不是 Yuzu／Ryujinx 整合包。
 
-- **目標版本**：初代 Nintendo Switch 的日版（Program ID `0100F3400332C000`），3.0.0 更新。此版本內含日文、
-  繁體中文與簡體中文。
-- **需要你自己的遊戲**：遊玩時需要你自己擁有、並由你自行合法傾印的遊戲。
-- **這裡沒有任何遊戲內容**：本專案不包含、也不散布任何遊戲內容、金鑰或解密工具，也不說明如何傾印或解密遊戲。
+- **目标版本**：初代 Nintendo Switch 的日版（Program ID `0100F3400332C000`），3.0.0 更新。此版本内含日文、
+  繁体中文与简体中文。
+- **需要你自己的游戏**：游玩时需要你自己拥有、并由你自行合法提取（dump）的游戏。
+- **这里没有任何游戏内容**：本项目不包含、也不分发任何游戏内容、密钥或解密工具，也不说明如何提取或解密游戏。
 
-### 目標
+### 致谢与项目定位
 
-以下全部是目標。[路線圖](ROADMAP.md)依階段列出同樣的目標，並加上長期構想。
+首先，我想特别感谢 **Monado 项目及其作者 TheMonadoGuy**。
 
-**畫面**
+Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给了我很大的启发，也让我更加期待《异度神剑》系列能够在 PC 平台上获得更完整的游戏体验。
 
-- PC 畫面設定放在遊戲自己「選項」畫面裡的一個分頁，不另開啟動器或設定視窗
-- 內部渲染解析度與輸出解析度分開設定；解析度可以隨視窗大小調整；顯示模式選項
-- 遊戲的動態解析度可以開關
-- 在 4K 等高輸出解析度下，介面與文字依然清晰
-- 以 NVIDIA DLSS 超解析度或 AMD FSR 超解析度提升解析度
-- 不使用升頻時的抗鋸齒：遊戲原本的 TAA、SMAA 或關閉
-- 以 NVIDIA DLSS 多幀生成或 AMD FSR 幀生成補幀，可以套用到全遊戲，或只在過場
-- HDR 輸出
-- 材質品質設定，支援高解析度貼圖替換
-- 景深與動態模糊可以個別關閉
+我了解到，TheMonadoGuy 目前也正在开发《异度神剑 2》（Xenoblade Chronicles 2）的 PC 版本。
 
-**效能**
+我希望特别说明：**XC2-Recomp 并不是为了与 Monado 作者直接竞争而建立的项目。**
 
-- 60 fps 以上，遊戲邏輯與原本的 30 fps 一致
-- 鎖幀檔位：30、60、120、144、165、不限
-- 垂直同步選項
-- NVIDIA Reflex，降低延遲
-- 預先編譯 shader pipeline，減少第一次進入新區域時的卡頓
-- 依 RAM、GPU 與 CPU 核心數自動調整快取與執行緒數
+这个项目有自己的开发方向，尤其希望提前考虑中文玩家的实际需求，包括中文语言支持、游戏版本兼容性、操作体验，以及符合 PC 玩家习惯的画面设置与功能扩展。
+
+我同样期待 TheMonadoGuy 未来公开的 XC2 项目。
+
+如果条件允许，我非常愿意与作者交流、合作；如果未来作者愿意开放相关成果，并且许可条件允许，我也希望有机会在其工作基础上继续研究和改进，而不是重复投入已经解决的问题。
+
+无论两个项目最终以独立还是合作的方式发展，我都希望它们能够互相促进，让更多玩家享受到更好的《异度神剑 2》PC 游戏体验。
+
+再次感谢 TheMonadoGuy 的贡献与启发。
+
+#### 技术致谢
+
+XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授权。
+
+| 项目 | 授权 | 用途 |
+|---|---|---|
+| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp)（Wonder runtime），作者 BelmanteGu | MIT | 重编译器与 runtime 的基础 |
+| Ryujinx 的 shader 翻译器（`Ryujinx.Graphics.Shader`），Ryujinx Team and Contributors | MIT | shader 翻译 |
+| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT | runtime 组件 |
+| [LASRecomp](https://github.com/peiikai/LASRecomp) 与 [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT | runtime 组件 |
+| AMD FidelityFX Super Resolution（FSR） | FSR 1：MIT；FidelityFX SDK：AMD 的 FidelityFX SDK 授权 | 超分辨率与帧生成 |
+| SMAA（Jorge Jimenez 等） | MIT | 抗锯齿 |
+| NVIDIA Streamline SDK | MIT（DLSS 组件属于 NVIDIA，不包含在内） | NVIDIA DLSS 与 Reflex 接入 |
+| FFmpeg | LGPL-2.1-or-later | 视频解码；动态链接，不包含在内 |
+| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT | 参考其做法；仅参考概念，未复制代码 |
+| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT | 参考其做法；仅参考概念，未复制代码 |
+| xc3_lib、xenomods | MIT | 文件格式与游戏结构参考；未复制代码 |
+
+未包含任何 GPL 授权的代码；GPL 项目只用于了解行为。未使用任何泄露或保密的 SDK 资料。
+
+### 目标
+
+以下全部是目标。[路线图](ROADMAP.md)按阶段列出同样的目标，并加上长期构想。
+
+**画面**
+
+- PC 画面设置放在游戏自带「选项」画面里的一个分页，不另开启动器或设置窗口
+- 内部渲染分辨率与输出分辨率分开设置；分辨率可以随窗口大小调整；显示模式选项
+- 游戏的动态分辨率可以开关
+- 在 4K 等高输出分辨率下，界面与文字依然清晰
+- 以 NVIDIA DLSS 超分辨率或 AMD FSR 超分辨率提升分辨率
+- 不使用超分辨率时的抗锯齿：游戏原本的 TAA、SMAA 或关闭
+- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
+- HDR 输出
+- 材质质量设置，支持高分辨率贴图替换
+- 景深与动态模糊可以分别关闭
+
+**性能**
+
+- 60 fps 以上，游戏逻辑与原本的 30 fps 一致
+- 锁帧档位：30、60、120、144、165、不限
+- 垂直同步选项
+- NVIDIA Reflex，降低延迟
+- 预先编译 shader pipeline，减少第一次进入新区域时的卡顿
+- 根据内存、GPU 与 CPU 核心数自动调整缓存与线程数
 
 **操作**
 
-- 鍵盤滑鼠：滑鼠控制鏡頭、數字鍵施放戰技、所有按鍵都可以自由改鍵
+- 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键都可以自由改键
 
 **Mod**
 
-- 支援 Ryujinx 與 yuzu 資料夾格式的 RomFS mod，以 LayeredFS 方式疊加載入，不修改原始檔案
+- 支持 Ryujinx 与 yuzu 文件夹格式的 RomFS mod，以 LayeredFS 方式叠加加载，不修改原始文件
 
-**存檔**
+**存档**
 
-- 存檔保護：每次遊玩自動備份，存檔損壞時可以回復
+- 存档保护：每次游玩自动备份，存档损坏时可以恢复
 
-**穩定性**
+**稳定性**
 
-- 畫面與行為和原版一致，沒有移植造成的錯誤
-- 日誌；遊戲崩潰時自動保存崩潰報告
+- 画面与行为和原版一致，没有移植造成的错误
+- 日志；游戏崩溃时自动保存崩溃报告
 
-### 長期構想
+### 长期构想
 
-可發佈版之後，[路線圖](ROADMAP.md)列出沒有時程的構想：減少繁瑣操作的優化 Mod、可選的玩法 Mod、系統 Mod、
-光線追蹤陰影（研究方向），以及參考 Nintendo Switch 2 Edition 新增內容的原創實作。所有會改變玩法或平衡的 Mod
-都是可選的，預設維持原版體驗。
+发布版之后，[路线图](ROADMAP.md)列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
+光线追踪阴影（研究方向），以及参考 Nintendo Switch 2 Edition 新增内容的原创实现。所有会改变玩法或平衡的 Mod
+都是可选的，默认保持原版体验。
 
-### 發布說明
+### 发布说明
 
-- 本倉庫現在不會、將來也不會提供遊戲執行檔、ExeFS／RomFS、金鑰、韌體、DLC、遊戲資源、解密工具或下載連結。
-  索取以上內容的 Issue 會直接關閉。
-- 將來公開的任何原始碼或工具，都會先經過授權、來源與可再散布性的審查。
+- 本仓库现在不会、将来也不会提供游戏可执行文件、ExeFS／RomFS、密钥、固件、DLC、游戏资源、解密工具或下载链接。
+  索取以上内容的 Issue 会直接关闭。
+- 将来公开的任何源代码或工具，都会先经过授权、来源与可再分发性的审查。
 
-### 免責聲明
+### 免责声明
 
-XC2-Recomp 是獨立、非商業的愛好者專案，與任天堂（Nintendo）、Monolith Soft 及本文提到的任何其他公司都沒有
-關係，未獲得其認可或贊助，也不是本遊戲的官方 PC 版。任天堂與 Monolith Soft 保有本遊戲及其素材的一切權利。
-*Xenoblade Chronicles*（異度神劍）與 *Nintendo Switch* 是任天堂的商標；NVIDIA、DLSS 與 Reflex 是 NVIDIA 的
-商標；AMD 與 FSR 是 AMD 的商標。其他商標皆屬於各自的權利人。
+XC2-Recomp 是独立、非商业的爱好者项目，与任天堂（Nintendo）、Monolith Soft 及本文提到的任何其他公司都没有
+关系，未获得其认可或赞助，也不是本游戏的官方 PC 版。任天堂与 Monolith Soft 保有本游戏及其素材的一切权利。
+*Xenoblade Chronicles*（异度神剑）与 *Nintendo Switch* 是任天堂的商标；NVIDIA、DLSS 与 Reflex 是 NVIDIA 的
+商标；AMD 与 FSR 是 AMD 的商标。其他商标均属于各自的权利人。
 
-### 授權
+### 授权
 
-目前尚未選定授權。
+目前尚未选定授权。
