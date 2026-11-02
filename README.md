@@ -8,6 +8,14 @@
 > This repository contains documentation only. It provides no builds, no downloads and no game files.
 > 本倉庫只有說明文件，不提供任何建置成品、下載或遊戲檔案。
 
+<p align="center">
+  <img src="docs/images/settings-main.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-upscaling.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-frame-generation.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-hdr.webp" width="49%" alt="Settings screen">
+</p>
+<p align="center"><em>Settings screen ・ 設定畫面</em></p>
+
 ---
 
 ## English
