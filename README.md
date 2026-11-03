@@ -98,6 +98,7 @@ Everything below is a goal. The [roadmap](ROADMAP.md) groups the same goals by s
 - 60 fps and higher, with game logic that behaves the same as at the original 30 fps
 - Frame rate caps: 30, 60, 120, 144, 165 or unlimited
 - V-sync options
+- Variable refresh rate (G-SYNC / FreeSync), in both fullscreen and borderless window modes
 - NVIDIA Reflex for lower latency
 - Shader pipeline precompilation, to reduce stutter the first time you enter a new area
 - Automatic tuning of caches and thread counts to your RAM, GPU and CPU cores
@@ -139,8 +140,8 @@ original.
 XC2-Recomp is an independent, non-commercial fan project. It is not affiliated with, endorsed by or sponsored by
 Nintendo, Monolith Soft or any other company named here, and it is not an official PC version of the game. Nintendo
 and Monolith Soft retain all rights to the game and its assets. *Xenoblade Chronicles* and *Nintendo Switch* are
-trademarks of Nintendo. NVIDIA, DLSS and Reflex are trademarks of NVIDIA; AMD and FSR are trademarks of AMD. All
-other trademarks belong to their respective owners.
+trademarks of Nintendo. NVIDIA, DLSS, G-SYNC and Reflex are trademarks of NVIDIA; AMD, FSR and FreeSync are
+trademarks of AMD. All other trademarks belong to their respective owners.
 
 ### License
 
@@ -223,6 +224,7 @@ XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授
 - 60 fps 以上，游戏逻辑与原本的 30 fps 一致
 - 锁帧档位：30、60、120、144、165、不限
 - 垂直同步选项
+- 可变刷新率（G-SYNC／FreeSync），全屏与无边框窗口模式下都能使用
 - NVIDIA Reflex，降低延迟
 - 预先编译 shader pipeline，减少第一次进入新区域时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整缓存与线程数
@@ -260,8 +262,8 @@ XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授
 
 XC2-Recomp 是独立、非商业的爱好者项目，与任天堂（Nintendo）、Monolith Soft 及本文提到的任何其他公司都没有
 关系，未获得其认可或赞助，也不是本游戏的官方 PC 版。任天堂与 Monolith Soft 保有本游戏及其素材的一切权利。
-*Xenoblade Chronicles*（异度神剑）与 *Nintendo Switch* 是任天堂的商标；NVIDIA、DLSS 与 Reflex 是 NVIDIA 的
-商标；AMD 与 FSR 是 AMD 的商标。其他商标均属于各自的权利人。
+*Xenoblade Chronicles*（异度神剑）与 *Nintendo Switch* 是任天堂的商标；NVIDIA、DLSS、G-SYNC 与 Reflex 是
+NVIDIA 的商标；AMD、FSR 与 FreeSync 是 AMD 的商标。其他商标均属于各自的权利人。
 
 ### 授权
 

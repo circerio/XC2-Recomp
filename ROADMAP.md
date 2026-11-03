@@ -21,6 +21,7 @@ The feature set planned for the first recorded showcase:
 - Anti-aliasing without an upscaler: the original TAA, SMAA or off
 - 60 fps and higher, with game logic that matches 30 fps
 - V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
+- Variable refresh rate (G-SYNC / FreeSync), in both fullscreen and borderless window modes
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
 - NVIDIA Reflex
 - HDR output
@@ -103,6 +104,7 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 - 不使用超分辨率时的抗锯齿：原本的 TAA、SMAA 或关闭
 - 60 fps 以上，游戏逻辑与 30 fps 一致
 - 垂直同步与锁帧档位（30／60／120／144／165／不限）
+- 可变刷新率（G-SYNC／FreeSync），全屏与无边框窗口模式下都能使用
 - NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
 - NVIDIA Reflex
 - HDR 输出
