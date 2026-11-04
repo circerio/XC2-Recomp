@@ -23,9 +23,7 @@
 ### Overview
 
 XC2-Recomp is a native Windows port of *Xenoblade Chronicles 2* for Nintendo Switch, made by static
-recompilation. The game's AArch64 machine code is translated ahead of time and built as an x86-64 Windows program,
-and the system, graphics and audio services the game calls are reimplemented natively. It is not an emulator, and
-not a Yuzu / Ryujinx bundle.
+recompilation. It is not an emulator, and not a Yuzu / Ryujinx bundle.
 
 - **Target version:** the Japanese release for the original Nintendo Switch (Program ID `0100F3400332C000`),
   update 3.0.0. This release includes Japanese, Traditional Chinese and Simplified Chinese text.
@@ -55,41 +53,41 @@ My sincere thanks again to TheMonadoGuy for the inspiration and contributions.
 
 #### Technical Acknowledgements
 
-XC2-Recomp uses or has learned from the following open-source projects. Each keeps its own license.
+Thanks to the following open-source projects. Each keeps its own license.
 
-| Project | License | Role |
-|---|---|---|
-| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp) (Wonder runtime) by BelmanteGu | MIT | Base of the recompiler and runtime |
-| Ryujinx shader translator (`Ryujinx.Graphics.Shader`), Ryujinx Team and Contributors | MIT | Shader translation |
-| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT | Runtime components |
-| [LASRecomp](https://github.com/peiikai/LASRecomp) and [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT | Runtime components |
-| AMD FidelityFX Super Resolution (FSR) | FSR 1: MIT; FidelityFX SDK: AMD's FidelityFX SDK license | Upscaling and frame generation |
-| SMAA (Jorge Jimenez et al.) | MIT | Anti-aliasing |
-| NVIDIA Streamline SDK | MIT (the DLSS components are NVIDIA's own and are not included) | NVIDIA DLSS and Reflex integration |
-| FFmpeg | LGPL-2.1-or-later | Video decoding; linked dynamically and not included |
-| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT | Approaches studied for reference; concepts only, no code copied |
-| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT | Approaches studied for reference; concepts only, no code copied |
-| xc3_lib, xenomods | MIT | File format and game structure reference; no code copied |
+| Project | License |
+|---|---|
+| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp) | MIT |
+| Ryujinx (`Ryujinx.Graphics.Shader`) | MIT |
+| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT |
+| [LASRecomp](https://github.com/peiikai/LASRecomp) | MIT |
+| [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT |
+| AMD FidelityFX Super Resolution (FSR) | FSR 1: MIT; FidelityFX SDK: AMD's FidelityFX SDK license |
+| SMAA | MIT |
+| NVIDIA Streamline SDK | MIT |
+| FFmpeg | LGPL-2.1-or-later |
+| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
+| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
+| xc3_lib | MIT |
+| xenomods | MIT |
 
-No GPL-licensed code is included; GPL projects were consulted for behaviour only. No leaked or confidential SDK
-material is used.
+### Features
 
-### Goals
+Features are listed in two groups: Implemented and Planned. The [roadmap](ROADMAP.md) lists the same features and
+adds long-term ideas.
 
-Everything below is a goal. The [roadmap](ROADMAP.md) groups the same goals by stage and adds long-term ideas.
+#### Implemented
 
 **Graphics**
 
-- PC graphics settings in a tab of the game's own Options screen, with no separate launcher or settings window
+- PC graphics settings inside the game's own Options screen, with no separate launcher or settings window
 - Internal render resolution set separately from output resolution; resolution that can follow the window size;
   display mode options
 - The game's dynamic resolution as an on/off option
 - Sharp UI and text at high output resolutions such as 4K
 - Upscaling with NVIDIA DLSS Super Resolution or AMD FSR Super Resolution
 - Anti-aliasing without an upscaler: the game's original TAA, SMAA, or off
-- Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
-  or to cutscenes only
-- HDR output
+- HDR output with brightness adjustment (peak brightness and paper white)
 - Texture quality setting, with support for high-resolution texture replacement
 - Separate switches to turn off depth of field and motion blur
 
@@ -98,19 +96,16 @@ Everything below is a goal. The [roadmap](ROADMAP.md) groups the same goals by s
 - 60 fps and higher, with game logic that behaves the same as at the original 30 fps
 - Frame rate caps: 30, 60, 120, 144, 165 or unlimited
 - V-sync options
-- Variable refresh rate (G-SYNC / FreeSync), in both fullscreen and borderless window modes
-- NVIDIA Reflex for lower latency
-- Shader pipeline precompilation, to reduce stutter the first time you enter a new area
-- Automatic tuning of caches and thread counts to your RAM, GPU and CPU cores
+- Variable refresh rate (G-SYNC / FreeSync)
 
 **Controls**
 
 - Keyboard and mouse: mouse camera control, number keys for Arts, and fully rebindable keys
+- Input device switching between controller and keyboard and mouse
 
 **Mods**
 
-- RomFS mods in the folder layout used by Ryujinx and yuzu, loaded on top of the game (LayeredFS) without
-  changing the original files
+- RomFS mods in the folder layout used by Ryujinx and yuzu, loaded without changing the original files
 
 **Saves**
 
@@ -118,15 +113,32 @@ Everything below is a goal. The [roadmap](ROADMAP.md) groups the same goals by s
 
 **Stability**
 
-- Rendering and behaviour that match the original game, without errors introduced by the port
 - Logs, and a crash report saved automatically if the game crashes
 
-### Long-term ideas
+#### Planned
 
-After the release, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional gameplay
-mods, system mods, ray-traced shadows (research) and original features inspired by content added in the Nintendo
-Switch 2 Edition. Every mod that changes gameplay or balance will be optional; by default the game plays as the
-original.
+**Graphics**
+
+- Exclusive fullscreen
+- Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
+  or to cutscenes only
+
+**Performance**
+
+- NVIDIA Reflex for lower latency
+- Shader pipeline precompilation, to reduce stutter
+- Automatic tuning to your RAM, GPU and CPU cores
+
+**Testing**
+
+- Developer test build
+
+#### Planned: long-term ideas
+
+Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional
+gameplay mods, system mods, ray-traced shadows (research) and original features inspired by content added in the
+Nintendo Switch 2 Edition. Every mod that changes gameplay or balance will be optional; by default the game plays as
+the original.
 
 ### Distribution
 
@@ -143,6 +155,8 @@ and Monolith Soft retain all rights to the game and its assets. *Xenoblade Chron
 trademarks of Nintendo. NVIDIA, DLSS, G-SYNC and Reflex are trademarks of NVIDIA; AMD, FSR and FreeSync are
 trademarks of AMD. All other trademarks belong to their respective owners.
 
+No GPL-licensed code is included, and no leaked or confidential SDK material is used.
+
 ### License
 
 No license has been chosen yet.
@@ -153,9 +167,8 @@ No license has been chosen yet.
 
 ### 项目简介
 
-XC2-Recomp 是 Nintendo Switch 版《异度神剑 2》的 Windows 原生移植，采用静态重编译：游戏的 AArch64 机器码
-预先转译，构建为 x86-64 的 Windows 程序；游戏调用的系统、图形与音频服务则以原生方式重新实现。本项目不是
-模拟器，也不是 Yuzu／Ryujinx 整合包。
+XC2-Recomp 是 Nintendo Switch 版《异度神剑 2》的 Windows 原生移植，采用静态重编译。本项目不是模拟器，也不是
+Yuzu／Ryujinx 整合包。
 
 - **目标版本**：初代 Nintendo Switch 的日版（Program ID `0100F3400332C000`），3.0.0 更新。此版本内含日文、
   繁体中文与简体中文。
@@ -184,38 +197,39 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 #### 技术致谢
 
-XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授权。
+感谢以下开源项目，它们各自保留自己的授权。
 
-| 项目 | 授权 | 用途 |
-|---|---|---|
-| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp)（Wonder runtime），作者 BelmanteGu | MIT | 重编译器与 runtime 的基础 |
-| Ryujinx 的 shader 翻译器（`Ryujinx.Graphics.Shader`），Ryujinx Team and Contributors | MIT | shader 翻译 |
-| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT | runtime 组件 |
-| [LASRecomp](https://github.com/peiikai/LASRecomp) 与 [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT | runtime 组件 |
-| AMD FidelityFX Super Resolution（FSR） | FSR 1：MIT；FidelityFX SDK：AMD 的 FidelityFX SDK 授权 | 超分辨率与帧生成 |
-| SMAA（Jorge Jimenez 等） | MIT | 抗锯齿 |
-| NVIDIA Streamline SDK | MIT（DLSS 组件属于 NVIDIA，不包含在内） | NVIDIA DLSS 与 Reflex 接入 |
-| FFmpeg | LGPL-2.1-or-later | 视频解码；动态链接，不包含在内 |
-| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT | 参考其做法；仅参考概念，未复制代码 |
-| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT | 参考其做法；仅参考概念，未复制代码 |
-| xc3_lib、xenomods | MIT | 文件格式与游戏结构参考；未复制代码 |
+| 项目 | 授权 |
+|---|---|
+| [SuperMarioWonderRecomp](https://github.com/BluetufieBugado/SuperMarioWonderRecomp) | MIT |
+| Ryujinx（`Ryujinx.Graphics.Shader`） | MIT |
+| [AC-Recomp](https://github.com/swaymun/AC-Recomp) | MIT |
+| [LASRecomp](https://github.com/peiikai/LASRecomp) | MIT |
+| [letsgo-recomp](https://github.com/raulzrrs/letsgo-recomp) | MIT |
+| AMD FidelityFX Super Resolution（FSR） | FSR 1：MIT；FidelityFX SDK：AMD 的 FidelityFX SDK 授权 |
+| SMAA | MIT |
+| NVIDIA Streamline SDK | MIT |
+| FFmpeg | LGPL-2.1-or-later |
+| [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
+| [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
+| xc3_lib | MIT |
+| xenomods | MIT |
 
-未包含任何 GPL 授权的代码；GPL 项目只用于了解行为。未使用任何泄露或保密的 SDK 资料。
+### 功能
 
-### 目标
+功能分为两组：已实现与目标。[路线图](ROADMAP.md)列出同样的功能，并加上长期构想。
 
-以下全部是目标。[路线图](ROADMAP.md)按阶段列出同样的目标，并加上长期构想。
+#### 已实现
 
 **画面**
 
-- PC 画面设置放在游戏自带「选项」画面里的一个分页，不另开启动器或设置窗口
+- PC 画面设置放在游戏自带的「选项」画面里，不另开启动器或设置窗口
 - 内部渲染分辨率与输出分辨率分开设置；分辨率可以随窗口大小调整；显示模式选项
 - 游戏的动态分辨率可以开关
 - 在 4K 等高输出分辨率下，界面与文字依然清晰
 - 以 NVIDIA DLSS 超分辨率或 AMD FSR 超分辨率提升分辨率
 - 不使用超分辨率时的抗锯齿：游戏原本的 TAA、SMAA 或关闭
-- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
-- HDR 输出
+- HDR 输出与亮度调整（峰值亮度、纸白）
 - 材质质量设置，支持高分辨率贴图替换
 - 景深与动态模糊可以分别关闭
 
@@ -224,18 +238,16 @@ XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授
 - 60 fps 以上，游戏逻辑与原本的 30 fps 一致
 - 锁帧档位：30、60、120、144、165、不限
 - 垂直同步选项
-- 可变刷新率（G-SYNC／FreeSync），全屏与无边框窗口模式下都能使用
-- NVIDIA Reflex，降低延迟
-- 预先编译 shader pipeline，减少第一次进入新区域时的卡顿
-- 根据内存、GPU 与 CPU 核心数自动调整缓存与线程数
+- 可变刷新率（G-SYNC／FreeSync）
 
 **操作**
 
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键都可以自由改键
+- 在手柄与键盘鼠标之间切换操作设备
 
 **Mod**
 
-- 支持 Ryujinx 与 yuzu 文件夹格式的 RomFS mod，以 LayeredFS 方式叠加加载，不修改原始文件
+- 支持 Ryujinx 与 yuzu 文件夹格式的 RomFS mod，加载时不修改原始文件
 
 **存档**
 
@@ -243,12 +255,28 @@ XC2-Recomp 使用或参考了以下开源项目，它们各自保留自己的授
 
 **稳定性**
 
-- 画面与行为和原版一致，没有移植造成的错误
 - 日志；游戏崩溃时自动保存崩溃报告
 
-### 长期构想
+#### 目标
 
-发布版之后，[路线图](ROADMAP.md)列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
+**画面**
+
+- 独占全屏
+- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
+
+**性能**
+
+- NVIDIA Reflex，降低延迟
+- 预先编译 shader pipeline，减少卡顿
+- 根据内存、GPU 与 CPU 核心数自动调整
+
+**测试**
+
+- 开发者测试版
+
+#### 目标：长期构想
+
+除上述功能外，[路线图](ROADMAP.md)还列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
 光线追踪阴影（研究方向），以及参考 Nintendo Switch 2 Edition 新增内容的原创实现。所有会改变玩法或平衡的 Mod
 都是可选的，默认保持原版体验。
 
@@ -264,6 +292,8 @@ XC2-Recomp 是独立、非商业的爱好者项目，与任天堂（Nintendo）�
 关系，未获得其认可或赞助，也不是本游戏的官方 PC 版。任天堂与 Monolith Soft 保有本游戏及其素材的一切权利。
 *Xenoblade Chronicles*（异度神剑）与 *Nintendo Switch* 是任天堂的商标；NVIDIA、DLSS、G-SYNC 与 Reflex 是
 NVIDIA 的商标；AMD、FSR 与 FreeSync 是 AMD 的商标。其他商标均属于各自的权利人。
+
+未包含任何 GPL 授权的代码，也未使用任何泄露或保密的 SDK 资料。
 
 ### 授权
 

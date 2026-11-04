@@ -6,38 +6,37 @@
 
 ## English
 
-Everything on this page is a goal or an idea. The stages describe scope, not a schedule. Nothing here is a
-commitment, and nothing here describes progress.
+Features are listed in two groups: Implemented and Planned.
 
-### Stage 1 — Showcase
+### Implemented
 
-The feature set planned for the first recorded showcase:
-
-- Rendering and behaviour without errors introduced by the port
-- A PC graphics tab in the game's own Options screen
+- PC graphics settings inside the game's own Options screen
 - Resolution: internal and output resolution set separately, display modes, sharp UI at 4K, resolution that follows
   the window size, dynamic resolution on/off
 - NVIDIA DLSS Super Resolution and AMD FSR Super Resolution
 - Anti-aliasing without an upscaler: the original TAA, SMAA or off
-- 60 fps and higher, with game logic that matches 30 fps
-- V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
-- Variable refresh rate (G-SYNC / FreeSync), in both fullscreen and borderless window modes
-- NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
-- NVIDIA Reflex
-- HDR output
+- HDR output with brightness adjustment (peak brightness and paper white)
 - Texture quality, including high-resolution textures
 - Switches for depth of field and motion blur
+- 60 fps and higher, with game logic that matches 30 fps
+- V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
+- Variable refresh rate (G-SYNC / FreeSync)
 - Keyboard and mouse: mouse camera, number keys for Arts, full key rebinding
-
-### Stage 2 — Release
-
-- RomFS mods in the Ryujinx / yuzu folder layout, loaded LayeredFS-style without changing the original files
+- Input device switching between controller and keyboard and mouse
+- RomFS mods in the Ryujinx / yuzu folder layout, loaded without changing the original files
 - Save protection: automatic backups and recovery from damaged saves
 - Logs and automatic crash reports
-- Shader pipeline precompilation, to reduce first-visit stutter
-- Automatic tuning to your RAM, GPU and CPU cores
 
-### After the release — long-term ideas
+### Planned
+
+- Exclusive fullscreen
+- NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
+- NVIDIA Reflex
+- Shader pipeline precompilation, to reduce stutter
+- Automatic tuning to your RAM, GPU and CPU cores
+- Developer test build
+
+### Planned: long-term ideas
 
 These ideas have no timeline and are not commitments. They show where the project could go after the release.
 
@@ -91,36 +90,36 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 ## 简体中文
 
-本页所有项目都是目标或构想。阶段代表范围，不代表时间表；这里没有任何承诺，也不代表任何进度。
+功能分为两组：已实现与目标。
 
-### 第一阶段：展示版
+### 已实现
 
-第一段展示视频计划包含的功能：
-
-- 画面与行为没有移植造成的错误
-- 游戏自带「选项」画面里的 PC 画面设置分页
+- 游戏自带「选项」画面里的 PC 画面设置
 - 分辨率：内部与输出分辨率分开设置、显示模式、4K 下清晰的界面、分辨率随窗口大小调整、动态分辨率开关
 - NVIDIA DLSS 超分辨率与 AMD FSR 超分辨率
 - 不使用超分辨率时的抗锯齿：原本的 TAA、SMAA 或关闭
-- 60 fps 以上，游戏逻辑与 30 fps 一致
-- 垂直同步与锁帧档位（30／60／120／144／165／不限）
-- 可变刷新率（G-SYNC／FreeSync），全屏与无边框窗口模式下都能使用
-- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
-- NVIDIA Reflex
-- HDR 输出
+- HDR 输出与亮度调整（峰值亮度、纸白）
 - 材质质量，包括高分辨率贴图
 - 景深与动态模糊开关
+- 60 fps 以上，游戏逻辑与 30 fps 一致
+- 垂直同步与锁帧档位（30／60／120／144／165／不限）
+- 可变刷新率（G-SYNC／FreeSync）
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键自由改键
-
-### 第二阶段：发布版
-
-- 支持 Ryujinx／yuzu 文件夹格式的 RomFS mod，以 LayeredFS 方式加载，不修改原始文件
+- 在手柄与键盘鼠标之间切换操作设备
+- 支持 Ryujinx／yuzu 文件夹格式的 RomFS mod，加载时不修改原始文件
 - 存档保护：自动备份，存档损坏时可以恢复
 - 日志与自动崩溃报告
-- 预先编译 shader pipeline，减少第一次进入新区域时的卡顿
-- 根据内存、GPU 与 CPU 核心数自动调整
 
-### 发布版之后：长期构想
+### 目标
+
+- 独占全屏
+- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
+- NVIDIA Reflex
+- 预先编译 shader pipeline，减少卡顿
+- 根据内存、GPU 与 CPU 核心数自动调整
+- 开发者测试版
+
+### 目标：长期构想
 
 这些构想没有时间表，也不是承诺，只是说明项目在发布版之后可能的方向。
 
