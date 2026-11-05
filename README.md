@@ -9,10 +9,10 @@
 > 本仓库只有说明文件，不提供任何构建产物、下载或游戏文件。
 
 <p align="center">
-  <img src="docs/images/settings-main.webp" width="49%" alt="Settings screen">
-  <img src="docs/images/settings-upscaling.webp" width="49%" alt="Settings screen">
-  <img src="docs/images/settings-frame-generation.webp" width="49%" alt="Settings screen">
-  <img src="docs/images/settings-hdr.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-tabs.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-display.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-graphics.webp" width="49%" alt="Settings screen">
+  <img src="docs/images/settings-framegen.webp" width="49%" alt="Settings screen">
 </p>
 <p align="center"><em>Settings screen ・ 设定画面</em></p>
 
