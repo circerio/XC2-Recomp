@@ -8,6 +8,22 @@
 > This repository contains documentation only. It provides no builds, no downloads and no game files.
 > 本仓库只有说明文件，不提供任何构建产物、下载或游戏文件。
 
+## 关于这个项目
+
+这款游戏已经有可以游玩的 PC 版本。这个项目的目标不同：不是“能玩”，而是一套完整、接近重制的 PC 原生体验——在画面、流畅度和操作上超越原版与模拟器，并且从设定画面到键鼠操作，都要像一款真正的 PC 游戏。
+
+最终版本预计命名为《异度神剑 2：REFORGED Edition》（非官方粉丝作品，与任天堂及 Monolith Soft 无关）。
+
+我不公开源码，因为这首先是做给我自己玩的：当年我没能把这款游戏玩完，这次想用自己最满意的方式重新走一遍。公开这些进展，是希望看到这份工作的人知道它的出发点。
+
+## About this project
+
+Playable PC versions of this game already exist. This project has a different goal: not just "playable", but a complete, near-remake native PC experience — surpassing the original and emulation in visuals, smoothness and controls, and feeling like a true PC game, from the settings menu to mouse-and-keyboard support.
+
+The final version is planned as "Xenoblade Chronicles 2: REFORGED Edition" (an unofficial fan work, not affiliated with Nintendo or Monolith Soft).
+
+The source code is not public because this is, first of all, something I'm making for myself: I never finished the game back then, and this time I want to play it through the way I've always wanted. I share the progress so that anyone who sees this work knows where it comes from.
+
 <p align="center">
   <img src="docs/images/settings-tabs.webp" width="49%" alt="Settings screen">
   <img src="docs/images/settings-display.webp" width="49%" alt="Settings screen">
@@ -51,6 +67,8 @@ Whether our projects remain independent or eventually find opportunities to coll
 
 My sincere thanks again to TheMonadoGuy for the inspiration and contributions.
 
+My thanks also to AksharDP and jmars125 for the research they have shared publicly in xc2-recomp.
+
 #### Technical Acknowledgements
 
 Thanks to the following open-source projects. Each keeps its own license.
@@ -68,13 +86,16 @@ Thanks to the following open-source projects. Each keeps its own license.
 | FFmpeg | LGPL-2.1-or-later |
 | [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
+| Monado (TheMonadoGuy) | MIT |
+| [xcx-recomp](https://github.com/jmars125/xcx-recomp) (jmars125) | MIT |
+| xc2-recomp ([AksharDP](https://github.com/AksharDP/xc2-recomp), [jmars125](https://github.com/jmars125/xc2-recomp)) | MIT |
 | xc3_lib | MIT |
 | xenomods | MIT |
 
 ### Features
 
 Features are listed in two groups: Implemented and Planned. The [roadmap](ROADMAP.md) lists the same features and
-adds long-term ideas.
+adds the plans for the final version and long-term ideas.
 
 #### Implemented
 
@@ -128,6 +149,10 @@ adds long-term ideas.
 - NVIDIA Reflex for lower latency
 - Shader pipeline precompilation, to reduce stutter
 - Automatic tuning to your RAM, GPU and CPU cores
+
+**Controls**
+
+- Direct mouse control of menus
 
 **Testing**
 
@@ -195,6 +220,8 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 再次感谢 TheMonadoGuy 的贡献与启发。
 
+同时感谢 AksharDP 和 jmars125 的 xc2-recomp 公开的研究成果。
+
 #### 技术致谢
 
 感谢以下开源项目，它们各自保留自己的授权。
@@ -212,12 +239,15 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 | FFmpeg | LGPL-2.1-or-later |
 | [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
+| Monado（TheMonadoGuy） | MIT |
+| [xcx-recomp](https://github.com/jmars125/xcx-recomp)（jmars125） | MIT |
+| xc2-recomp（[AksharDP](https://github.com/AksharDP/xc2-recomp)、[jmars125](https://github.com/jmars125/xc2-recomp)） | MIT |
 | xc3_lib | MIT |
 | xenomods | MIT |
 
 ### 功能
 
-功能分为两组：已实现与目标。[路线图](ROADMAP.md)列出同样的功能，并加上长期构想。
+功能分为两组：已实现与目标。[路线图](ROADMAP.md)列出同样的功能，并加上最终版本的规划与长期构想。
 
 #### 已实现
 
@@ -269,6 +299,10 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 - NVIDIA Reflex，降低延迟
 - 预先编译 shader pipeline，减少卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
+
+**操作**
+
+- 鼠标直接操作菜单
 
 **测试**
 

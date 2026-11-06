@@ -34,11 +34,20 @@ Features are listed in two groups: Implemented and Planned.
 - NVIDIA Reflex
 - Shader pipeline precompilation, to reduce stutter
 - Automatic tuning to your RAM, GPU and CPU cores
+- Direct mouse control of menus
 - Developer test build
+
+### Planned: final version (if released)
+
+- Choose a mode when starting a new game: Classic (the original experience) or Enhanced (quality-of-life mods enabled
+  in advance)
+- Multiple save slots
+- Turn mods on and off individually in the settings menu, with support for mods you install yourself
+- Selected community mods integrated in advance, with their authors' permission, in a form that contains no game files
 
 ### Planned: long-term ideas
 
-These ideas have no timeline and are not commitments. They show where the project could go after the release.
+These ideas have no timeline and are not commitments. They show where the project could go.
 
 **Principle:** every mod that changes gameplay or balance is optional. By default the game plays as the original.
 
@@ -71,8 +80,8 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 #### System mods
 
-- More save slots, with rollback
-- A mod loader with conflict checking
+- Save rollback
+- Conflict checking for installed mods
 - Button prompts for Xbox, PlayStation and Switch controllers
 - UI safe area and font scaling for ultrawide screens such as 21:9
 
@@ -117,11 +126,19 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 - NVIDIA Reflex
 - 预先编译 shader pipeline，减少卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
+- 鼠标直接操作菜单
 - 开发者测试版
+
+### 目标：最终版本（若发布）
+
+- 开始新游戏时选择模式：经典模式（原版体验）或增强模式（预先开启优化 Mod）
+- 多个存档位
+- 在设置菜单里分别开关 Mod，并支持玩家自行安装的 Mod
+- 预先整合经作者同意的优秀 Mod（以不包含游戏文件的形式提供）
 
 ### 目标：长期构想
 
-这些构想没有时间表，也不是承诺，只是说明项目在发布版之后可能的方向。
+这些构想没有时间表，也不是承诺，只是说明项目可能的方向。
 
 **原则**：所有会改变玩法或平衡的 Mod 都是可选的，默认保持原版体验。
 
@@ -154,8 +171,8 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 #### 系统 Mod
 
-- 更多存档位，可以回滚
-- Mod 加载器与冲突检查
+- 存档回滚
+- 已安装 Mod 的冲突检查
 - 按键图标（Xbox、PlayStation、Switch）
 - 21:9 等超宽屏的界面安全区与字体缩放
 
