@@ -30,12 +30,12 @@ The source code is not public because this is, first of all, something I'm makin
 
 下面列出这个项目的特色功能和目前状态。每一项完成后，我都会发布对应的实现指南。
 
-| # | 名称 | 说明 | 状态 | 指南 |
+| # | 名称 | 说明 | 状态 | 指⁠南 |
 |---|---|---|---|---|
-| 1 | 可变刷新率 | 无边框和独占全屏都支持 G-SYNC 与 FreeSync | 指南已发布 | [指南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 1 | 可变刷新率 | 无边框和独占全屏都支持 G-SYNC 与 FreeSync | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 2 | 锁帧时刷新率稳定 | 锁帧时显示器的刷新率保持稳定 | 开发中 |  |
-| 3 | HDR 输出 | HDR10 与 scRGB 输出，可调峰值亮度和纸白，并保留高光 | 已完成，指南准备中 |  |
-| 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 3 | HDR 输出 | HDR10 与 scRGB 输出，可调峰值亮度和纸白，并保留高光 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
+| 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 已完成，指南准备中 |  |
 | 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
 | 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 已完成，指南准备中 |  |
@@ -55,7 +55,7 @@ Below are the project's signature features and their current status. When each o
 |---|---|---|---|---|
 | 1 | Variable refresh rate | G-SYNC and FreeSync in borderless and exclusive fullscreen | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 2 | Steady refresh at a locked frame rate | A monitor's refresh rate stays steady at a locked frame rate | In development |  |
-| 3 | HDR output | HDR10 and scRGB output with peak brightness and paper white, and highlights kept | Done, guide in preparation |  |
+| 3 | HDR output | HDR10 and scRGB output with peak brightness and paper white, and highlights kept | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
 | 4 | Exclusive fullscreen | A true exclusive mode next to borderless, with Alt+Tab and F11 handled | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Done, guide in preparation |  |
 | 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
