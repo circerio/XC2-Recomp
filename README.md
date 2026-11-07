@@ -24,6 +24,48 @@ The final version is planned as "Xenoblade Chronicles 2: REFORGED Edition" (an u
 
 The source code is not public because this is, first of all, something I'm making for myself: I never finished the game back then, and this time I want to play it through the way I've always wanted. I share the progress so that anyone who sees this work knows where it comes from.
 
+## 回馈社区
+
+这个项目从许多开源项目和开发者公开的研究中受益良多。主线源码不会公开，但我认为帮助别人是必须做的事：凡是这个项目原创、能帮到别人的技术成果——特别是这款游戏原生 PC 化中还没有公开解法的问题——都会整理成实现指南，或作为独立的工具与代码公开，让其他开发者可以直接参考和使用。
+
+下面列出这个项目的特色功能和目前状态。每一项完成后，我都会发布对应的实现指南。
+
+| # | 名称 | 说明 | 状态 | 指南 |
+|---|---|---|---|---|
+| 1 | 可变刷新率 | 无边框和独占全屏都支持 G-SYNC 与 FreeSync | 指南已发布 | [指南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 2 | 锁帧时刷新率稳定 | 锁帧时显示器的刷新率保持稳定 | 开发中 |  |
+| 3 | HDR 输出 | HDR10 与 scRGB 输出，可调峰值亮度和纸白，并保留高光 | 已完成，指南准备中 |  |
+| 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 已完成，指南准备中 |  |
+| 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
+| 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 已完成，指南准备中 |  |
+| 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 已完成，指南准备中 |  |
+| 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 已完成，指南准备中 |  |
+| 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动 | 开发中 |  |
+| 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 开发中 |  |
+| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 开发中 |  |
+
+## Giving back
+
+This project has benefited greatly from open-source projects and the research other developers have shared publicly. The main source code will stay closed, but helping others is something I consider essential: original work from this project that can help other people — especially problems in bringing this game natively to PC that have no public solution yet — will be written up as implementation guides, or released as standalone tools and code, so other developers can use it directly.
+
+Below are the project's signature features and their current status. When each one is finished, I will publish an implementation guide for it.
+
+| # | Name | Description | Status | Guide |
+|---|---|---|---|---|
+| 1 | Variable refresh rate | G-SYNC and FreeSync in borderless and exclusive fullscreen | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 2 | Steady refresh at a locked frame rate | A monitor's refresh rate stays steady at a locked frame rate | In development |  |
+| 3 | HDR output | HDR10 and scRGB output with peak brightness and paper white, and highlights kept | Done, guide in preparation |  |
+| 4 | Exclusive fullscreen | A true exclusive mode next to borderless, with Alt+Tab and F11 handled | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
+| 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Done, guide in preparation |  |
+| 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
+| 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Done, guide in preparation |  |
+| 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Done, guide in preparation |  |
+| 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Done, guide in preparation |  |
+| 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus | In development |  |
+| 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | In development |  |
+| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | In development |  |
+
 <p align="center">
   <img src="docs/images/settings-tabs.webp" width="49%" alt="Settings screen">
   <img src="docs/images/settings-display.webp" width="49%" alt="Settings screen">
@@ -104,6 +146,7 @@ adds the plans for the final version and long-term ideas.
 - PC graphics settings inside the game's own Options screen, with no separate launcher or settings window
 - Internal render resolution set separately from output resolution; resolution that can follow the window size;
   display mode options
+- Exclusive fullscreen
 - The game's dynamic resolution as an on/off option
 - Sharp UI and text at high output resolutions such as 4K
 - Upscaling with NVIDIA DLSS Super Resolution or AMD FSR Super Resolution
@@ -114,7 +157,7 @@ adds the plans for the final version and long-term ideas.
 
 **Performance**
 
-- 60 fps and higher, with game logic that behaves the same as at the original 30 fps
+- 60 fps and higher
 - Frame rate caps: 30, 60, 120, 144, 165 or unlimited
 - V-sync options
 - Variable refresh rate (G-SYNC / FreeSync)
@@ -140,7 +183,6 @@ adds the plans for the final version and long-term ideas.
 
 **Graphics**
 
-- Exclusive fullscreen
 - Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
   or to cutscenes only
 
@@ -255,6 +297,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - PC 画面设置放在游戏自带的「选项」画面里，不另开启动器或设置窗口
 - 内部渲染分辨率与输出分辨率分开设置；分辨率可以随窗口大小调整；显示模式选项
+- 独占全屏
 - 游戏的动态分辨率可以开关
 - 在 4K 等高输出分辨率下，界面与文字依然清晰
 - 以 NVIDIA DLSS 超分辨率或 AMD FSR 超分辨率提升分辨率
@@ -265,7 +308,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 **性能**
 
-- 60 fps 以上，游戏逻辑与原本的 30 fps 一致
+- 60 fps 以上
 - 锁帧档位：30、60、120、144、165、不限
 - 垂直同步选项
 - 可变刷新率（G-SYNC／FreeSync）
@@ -291,7 +334,6 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 **画面**
 
-- 独占全屏
 - 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
 
 **性能**

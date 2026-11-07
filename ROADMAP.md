@@ -13,12 +13,13 @@ Features are listed in two groups: Implemented and Planned.
 - PC graphics settings inside the game's own Options screen
 - Resolution: internal and output resolution set separately, display modes, sharp UI at 4K, resolution that follows
   the window size, dynamic resolution on/off
+- Exclusive fullscreen
 - NVIDIA DLSS Super Resolution and AMD FSR Super Resolution
 - Anti-aliasing without an upscaler: the original TAA, SMAA or off
 - HDR output with brightness adjustment (peak brightness and paper white)
 - Texture quality, including high-resolution textures
 - Switches for depth of field and motion blur
-- 60 fps and higher, with game logic that matches 30 fps
+- 60 fps and higher
 - V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
 - Variable refresh rate (G-SYNC / FreeSync)
 - Keyboard and mouse: mouse camera, number keys for Arts, full key rebinding
@@ -29,7 +30,6 @@ Features are listed in two groups: Implemented and Planned.
 
 ### Planned
 
-- Exclusive fullscreen
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
 - NVIDIA Reflex
 - Shader pipeline precompilation, to reduce stutter
@@ -105,12 +105,13 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 - 游戏自带「选项」画面里的 PC 画面设置
 - 分辨率：内部与输出分辨率分开设置、显示模式、4K 下清晰的界面、分辨率随窗口大小调整、动态分辨率开关
+- 独占全屏
 - NVIDIA DLSS 超分辨率与 AMD FSR 超分辨率
 - 不使用超分辨率时的抗锯齿：原本的 TAA、SMAA 或关闭
 - HDR 输出与亮度调整（峰值亮度、纸白）
 - 材质质量，包括高分辨率贴图
 - 景深与动态模糊开关
-- 60 fps 以上，游戏逻辑与 30 fps 一致
+- 60 fps 以上
 - 垂直同步与锁帧档位（30／60／120／144／165／不限）
 - 可变刷新率（G-SYNC／FreeSync）
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键自由改键
@@ -121,7 +122,6 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 ### 目标
 
-- 独占全屏
 - NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
 - NVIDIA Reflex
 - 预先编译 shader pipeline，减少卡顿
