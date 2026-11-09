@@ -66,6 +66,8 @@ Below are the project's signature features and their current status. When each o
 | 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | In development |  |
 | 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | In development |  |
 
+[开发日志／Development log](DEVLOG.md)
+
 <p align="center">
   <img src="docs/images/settings-tabs.webp" width="49%" alt="Settings screen">
   <img src="docs/images/settings-display.webp" width="49%" alt="Settings screen">
@@ -125,6 +127,7 @@ Thanks to the following open-source projects. Each keeps its own license.
 | AMD FidelityFX Super Resolution (FSR) | FSR 1: MIT; FidelityFX SDK: AMD's FidelityFX SDK license |
 | SMAA | MIT |
 | NVIDIA Streamline SDK | MIT |
+| AMD Vulkan Memory Allocator (VMA) | MIT |
 | FFmpeg | LGPL-2.1-or-later |
 | [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
@@ -278,6 +281,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 | AMD FidelityFX Super Resolution（FSR） | FSR 1：MIT；FidelityFX SDK：AMD 的 FidelityFX SDK 授权 |
 | SMAA | MIT |
 | NVIDIA Streamline SDK | MIT |
+| AMD Vulkan Memory Allocator（VMA） | MIT |
 | FFmpeg | LGPL-2.1-or-later |
 | [seedds/nxnative](https://github.com/seedds/nxnative) | MIT |
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
