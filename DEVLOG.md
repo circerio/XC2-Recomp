@@ -4,6 +4,62 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-10
+
+### 简体中文
+
+#### 已解决的问题
+
+- 开启 HDR 后，在部分显示器上，峰值高于纸白时画面会明显发灰。送给显示器的 HDR 元数据写的亮度高过这个显示模式的额定值时，全屏画面会变灰；现在默认不送了。实机试玩已确认，全屏和窗口都不再发灰。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **帧生成**：支持 DLSS 多帧生成和 FSR 帧生成，并加入 Reflex 低延迟。设定里新增四个选项：DLSS 多帧生成（倍数视显卡支持而定）、FSR 帧生成、套用范围（整个游戏或只在过场）和 Reflex。生成帧时会另外提供不含游戏界面的画面，用来减少界面拖影。默认关闭。FSR 帧生成的整体流程参考了 AksharDP 的 [xc2-recomp](https://github.com/AksharDP/xc2-recomp)。
+- **贴图串流移到后台**：新贴图载入时的转换改在后台线程进行，不再占用画面的处理时间，减少移动时的慢帧。现在默认开启。
+- **键盘、鼠标和手柄**：
+  - 设定里不用再选操作装置，会跟着你正在用的装置自动切换。
+  - 改键的入口换了更清楚的名字，并标示可以打开。
+  - 手柄也能改键，改键在场景和战斗中生效。手柄配置可选任天堂、Xbox 或 PlayStation，按键提示会显示对应的图标。菜单里用哪个手柄键确定、哪个键返回也可以选，菜单、提示画面和对话都会跟着。
+  - 更多可以改的键：十字键的动作默认用方向键，鼠标中键重设视角；鼠标滚轮也能绑定，并可以用滚轮拉近拉远镜头。
+  - 标题画面的所有选项和游戏开头的各个画面都能用鼠标操作；对话可以用左键推进；道具页面可以用鼠标，清单可以用滚轮滚动；过场暂停时可以用左键跳过。
+
+#### 正在调查
+
+- 开启帧生成时，画面送出的节奏目前不均匀。正在查原因。
+- 锁帧时一边移动一边转动视角偶尔会卡一下：原因已经查到。第一次到新的地方时，大多是在准备新的着色器；去过的地方，主要是贴图串流和游戏本身偶尔较慢。贴图串流的部分已经改在后台处理（见上），其余的还在看。
+
+#### 已公开的指南更新
+
+- [HDR 指南第 2 节](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr#2-stage-1-the-sdr-picture-on-an-hdr-swapchain)：不要在交换链上设定 HDR 元数据，以及我们设定时显示器发生了什么；检查 HDR 时，全屏和窗口都要看。
+- [VRR 指南第 5 节](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr#5-the-refresh-meter-jumps-at-a-locked-frame-rate)：开启送出节奏后刷新率读数的表现，以及读数跳动背后的慢帧。
+
+### English
+
+#### Fixed
+
+- With HDR on, the picture turned noticeably grey on some displays when the peak was above paper white. When the HDR metadata sent to the display claimed more brightness than the display mode is rated for, the picture turned grey in fullscreen; it is no longer sent by default. Confirmed in hands-on play: no grey in fullscreen or in a window.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Frame generation**: DLSS Multi Frame Generation and FSR frame generation, plus Reflex for lower latency. Four new settings: DLSS multi-frame generation (the multiplier depends on the graphics card), FSR frame generation, where it applies (the whole game or cutscenes only), and Reflex. Frame generation also gets a copy of the picture without the game's interface, meant to reduce smearing of the interface. Off by default. The FSR frame generation flow follows AksharDP's [xc2-recomp](https://github.com/AksharDP/xc2-recomp).
+- **Texture streaming in the background**: converting newly loaded textures now happens on a background thread instead of taking time from drawing the frame, for fewer slow frames while moving. Now on by default.
+- **Keyboard, mouse and gamepad**:
+  - No more choosing a control device in the settings: it switches automatically to whatever you are using.
+  - The key rebinding entry has a clearer name and shows that it opens a page.
+  - Gamepad buttons can be rebound too, for the field and battle. The gamepad layout can be Nintendo, Xbox or PlayStation, and button prompts show the matching icons. Which gamepad button confirms and which goes back in menus can also be chosen, and menus, prompt screens and dialogue follow it.
+  - More keys can be rebound: D-pad actions default to the arrow keys and the middle mouse button resets the camera; the mouse wheel can be bound, and it can zoom the camera in and out.
+  - Every option on the title screen and the screens at the start of the game work with the mouse; left click advances dialogue; the item page works with the mouse and its lists scroll with the wheel; left click skips from a paused cutscene.
+
+#### Under investigation
+
+- With frame generation on, frames currently reach the display at uneven intervals. Looking into the cause.
+- At a locked frame rate, moving while turning the camera occasionally hitches: the cause has been found. In a place visited for the first time it is mostly new shaders being prepared; in places already visited it is mainly texture streaming and the game itself occasionally running late. The texture streaming part now runs in the background (see above); the rest is still being looked at.
+
+#### Guide updates
+
+- [HDR guide, section 2](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr#2-stage-1-the-sdr-picture-on-an-hdr-swapchain): don't set HDR metadata on the swapchain, what our display did when we set it, and why HDR should be checked in fullscreen as well as in a window.
+- [VRR guide, section 5](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr#5-the-refresh-meter-jumps-at-a-locked-frame-rate): what the refresh meter showed with frame pacing on, and the slow frames behind its jumps.
+
 ## 2026-11-09
 
 ### 简体中文
