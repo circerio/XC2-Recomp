@@ -10,12 +10,12 @@ A daily record of what changed: problems fixed, features added, and what is stil
 
 #### 已解决的问题
 
-- 开启 HDR 后，在部分显示器上，峰值高于纸白时画面会明显发灰。送给显示器的 HDR 元数据写的亮度高过这个显示模式的额定值时，全屏画面会变灰；现在默认不送了。实机试玩已确认，全屏和窗口都不再发灰。
+- 开启 HDR 后，在我们测试的显示器上，全屏时画面会明显发灰。我们送给显示器的 HDR 信息（HDR10 元数据）写的亮度高过这个显示模式的额定亮度时就会这样。现在默认不再送这份信息，实机试玩已确认全屏和窗口都不再发灰。
 
 #### 新加入的功能（已合并，等待实机验证）
 
 - **帧生成**：支持 DLSS 多帧生成和 FSR 帧生成，并加入 Reflex 低延迟。设定里新增四个选项：DLSS 多帧生成（倍数视显卡支持而定）、FSR 帧生成、套用范围（整个游戏或只在过场）和 Reflex。生成帧时会另外提供不含游戏界面的画面，用来减少界面拖影。默认关闭。FSR 帧生成的整体流程参考了 AksharDP 的 [xc2-recomp](https://github.com/AksharDP/xc2-recomp)。
-- **贴图串流移到后台**：新贴图载入时的转换改在后台线程进行，不再占用画面的处理时间，减少移动时的慢帧。现在默认开启。
+- **贴图串流移到后台**：新贴图载入时的转换改在后台线程进行，减少移动时的慢帧。现在默认开启。
 - **键盘、鼠标和手柄**：
   - 设定里不用再选操作装置，会跟着你正在用的装置自动切换。
   - 改键的入口换了更清楚的名字，并标示可以打开。
@@ -37,12 +37,12 @@ A daily record of what changed: problems fixed, features added, and what is stil
 
 #### Fixed
 
-- With HDR on, the picture turned noticeably grey on some displays when the peak was above paper white. When the HDR metadata sent to the display claimed more brightness than the display mode is rated for, the picture turned grey in fullscreen; it is no longer sent by default. Confirmed in hands-on play: no grey in fullscreen or in a window.
+- With HDR on, on the display we tested, the picture turned noticeably grey in fullscreen. This happens when the HDR information we send to the display (HDR10 metadata) states a brightness above the rated brightness of that display mode. It is no longer sent by default; confirmed in hands-on play: no grey in fullscreen or in a window.
 
 #### New (merged, awaiting hands-on testing)
 
-- **Frame generation**: DLSS Multi Frame Generation and FSR frame generation, plus Reflex for lower latency. Four new settings: DLSS multi-frame generation (the multiplier depends on the graphics card), FSR frame generation, where it applies (the whole game or cutscenes only), and Reflex. Frame generation also gets a copy of the picture without the game's interface, meant to reduce smearing of the interface. Off by default. The FSR frame generation flow follows AksharDP's [xc2-recomp](https://github.com/AksharDP/xc2-recomp).
-- **Texture streaming in the background**: converting newly loaded textures now happens on a background thread instead of taking time from drawing the frame, for fewer slow frames while moving. Now on by default.
+- **Frame generation**: DLSS Multi Frame Generation and FSR frame generation, plus Reflex for lower latency. Four new settings: DLSS multi-frame generation (the multiplier depends on the graphics card), FSR frame generation, where it applies (the whole game or cutscenes only), and Reflex. Frame generation also gets a copy of the picture without the game's interface, to reduce interface smearing. Off by default. The FSR frame generation flow follows AksharDP's [xc2-recomp](https://github.com/AksharDP/xc2-recomp).
+- **Texture streaming in the background**: converting newly loaded textures now happens on a background thread, for fewer slow frames while moving. Now on by default.
 - **Keyboard, mouse and gamepad**:
   - No more choosing a control device in the settings: it switches automatically to whatever you are using.
   - The key rebinding entry has a clearer name and shows that it opens a page.
