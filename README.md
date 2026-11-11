@@ -36,7 +36,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 2 | 锁帧时刷新率稳定 | 锁帧时显示器的刷新率大多保持稳定 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr#5-the-refresh-meter-jumps-at-a-locked-frame-rate) |
 | 3 | HDR 输出 | HDR10 与 scRGB 输出，可调峰值亮度和纸白，并保留高光 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
 | 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
-| 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 已完成，指南准备中 |  |
+| 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
 | 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 已完成，指南准备中 |  |
 | 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 已完成，指南准备中 |  |
@@ -57,7 +57,7 @@ Below are the project's signature features and their current status. When each o
 | 2 | Steady refresh at a locked frame rate | A monitor's refresh rate mostly holds steady at a locked frame rate | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr#5-the-refresh-meter-jumps-at-a-locked-frame-rate) |
 | 3 | HDR output | HDR10 and scRGB output with peak brightness and paper white, and highlights kept | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
 | 4 | Exclusive fullscreen | A true exclusive mode next to borderless, with Alt+Tab and F11 handled | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
-| 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Done, guide in preparation |  |
+| 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
 | 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Done, guide in preparation |  |
 | 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Done, guide in preparation |  |
@@ -156,6 +156,7 @@ adds the plans for the final version and long-term ideas.
 - Anti-aliasing without an upscaler: the game's original TAA, SMAA, or off
 - HDR output with brightness adjustment (peak brightness and paper white)
 - Texture quality setting, with support for high-resolution texture replacement
+- Anisotropic filtering setting
 - Separate switches to turn off depth of field and motion blur
 
 **Performance**
@@ -164,11 +165,13 @@ adds the plans for the final version and long-term ideas.
 - Frame rate caps: 30, 60, 120, 144, 165 or unlimited
 - V-sync options
 - Variable refresh rate (G-SYNC / FreeSync)
+- Background shader precompilation
 
 **Controls**
 
 - Keyboard and mouse: mouse camera control, number keys for Arts, and fully rebindable keys
 - Input device switching between controller and keyboard and mouse
+- Button prompts for Xbox, PlayStation and Nintendo controller layouts
 
 **Mods**
 
@@ -188,11 +191,13 @@ adds the plans for the final version and long-term ideas.
 
 - Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
   or to cutscenes only
+- More texture quality levels (High, Max)
+- Model detail (LOD) levels
 
 **Performance**
 
 - NVIDIA Reflex for lower latency
-- Shader pipeline precompilation, to reduce stutter
+- Less stutter on first visits to new places
 - Automatic tuning to your RAM, GPU and CPU cores
 
 **Controls**
@@ -308,6 +313,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 - 不使用超分辨率时的抗锯齿：游戏原本的 TAA、SMAA 或关闭
 - HDR 输出与亮度调整（峰值亮度、纸白）
 - 材质质量设置，支持高分辨率贴图替换
+- 各向异性过滤设置
 - 景深与动态模糊可以分别关闭
 
 **性能**
@@ -316,11 +322,13 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 - 锁帧档位：30、60、120、144、165、不限
 - 垂直同步选项
 - 可变刷新率（G-SYNC／FreeSync）
+- 后台预编译着色器
 
 **操作**
 
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键都可以自由改键
 - 在手柄与键盘鼠标之间切换操作设备
+- 按键图标（Xbox、PlayStation、任天堂配置）
 
 **Mod**
 
@@ -339,11 +347,13 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 **画面**
 
 - 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
+- 更多材质质量档位（高、最高）
+- 模型细节（LOD）档位
 
 **性能**
 
 - NVIDIA Reflex，降低延迟
-- 预先编译 shader pipeline，减少卡顿
+- 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
 
 **操作**

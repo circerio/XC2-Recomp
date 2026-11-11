@@ -17,13 +17,16 @@ Features are listed in two groups: Implemented and Planned.
 - NVIDIA DLSS Super Resolution and AMD FSR Super Resolution
 - Anti-aliasing without an upscaler: the original TAA, SMAA or off
 - HDR output with brightness adjustment (peak brightness and paper white)
-- Texture quality, including high-resolution textures
+- Texture quality setting, with support for high-resolution texture replacement
+- Anisotropic filtering setting
 - Switches for depth of field and motion blur
 - 60 fps and higher
 - V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
 - Variable refresh rate (G-SYNC / FreeSync)
+- Background shader precompilation
 - Keyboard and mouse: mouse camera, number keys for Arts, full key rebinding
 - Input device switching between controller and keyboard and mouse
+- Button prompts for Xbox, PlayStation and Nintendo controller layouts
 - RomFS mods in the Ryujinx / yuzu folder layout, loaded without changing the original files
 - Save protection: automatic backups and recovery from damaged saves
 - Logs and automatic crash reports
@@ -32,7 +35,9 @@ Features are listed in two groups: Implemented and Planned.
 
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
 - NVIDIA Reflex
-- Shader pipeline precompilation, to reduce stutter
+- More texture quality levels (High, Max)
+- Model detail (LOD) levels
+- Less stutter on first visits to new places
 - Automatic tuning to your RAM, GPU and CPU cores
 - Direct mouse control of menus
 - Developer test build
@@ -82,7 +87,6 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 - Save rollback
 - Conflict checking for installed mods
-- Button prompts for Xbox, PlayStation and Switch controllers
 - UI safe area and font scaling for ultrawide screens such as 21:9
 
 #### Graphics research
@@ -109,13 +113,16 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 - NVIDIA DLSS 超分辨率与 AMD FSR 超分辨率
 - 不使用超分辨率时的抗锯齿：原本的 TAA、SMAA 或关闭
 - HDR 输出与亮度调整（峰值亮度、纸白）
-- 材质质量，包括高分辨率贴图
+- 材质质量设置，支持高分辨率贴图替换
+- 各向异性过滤设置
 - 景深与动态模糊开关
 - 60 fps 以上
 - 垂直同步与锁帧档位（30／60／120／144／165／不限）
 - 可变刷新率（G-SYNC／FreeSync）
+- 后台预编译着色器
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键自由改键
 - 在手柄与键盘鼠标之间切换操作设备
+- 按键图标（Xbox、PlayStation、任天堂配置）
 - 支持 Ryujinx／yuzu 文件夹格式的 RomFS mod，加载时不修改原始文件
 - 存档保护：自动备份，存档损坏时可以恢复
 - 日志与自动崩溃报告
@@ -124,7 +131,9 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 - NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
 - NVIDIA Reflex
-- 预先编译 shader pipeline，减少卡顿
+- 更多材质质量档位（高、最高）
+- 模型细节（LOD）档位
+- 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
 - 鼠标直接操作菜单
 - 开发者测试版
@@ -173,7 +182,6 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 - 存档回滚
 - 已安装 Mod 的冲突检查
-- 按键图标（Xbox、PlayStation、Switch）
 - 21:9 等超宽屏的界面安全区与字体缩放
 
 #### 画面研究

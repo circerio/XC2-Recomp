@@ -4,6 +4,78 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-11
+
+### 简体中文
+
+#### 已解决的问题
+
+- 用键盘同时按住两个移动方向的键时，角色现在会斜着走，之前只会直着走。实机试玩已确认。
+- 主菜单里还没解锁（显示「???」）的项目，鼠标移上去不再亮起，点了也不会打开。实机试玩已确认。
+- 任天堂配置下，L、R、ZL、ZR 的按键图标改成了和游戏原本一样的外形，实机试玩已确认。Xbox 和 PlayStation 配置的肩键和扳机键图标也一起改了，这部分等待实机验证。
+- 任天堂配置下，十字键改键后，按键提示改为显示游戏原本的图标（之前显示的是箭头）；4K 时，文字里的按键图标都换成了清楚的版本。已合并，等待实机验证。
+
+#### 实机试玩已确认
+
+- 2026-11-09 和 2026-11-10 记为等待实机验证的键盘、鼠标和手柄功能，这次实机试玩确认了这些：
+  - 设定里不用再选操作装置；改键的入口能打开。
+  - 标题画面的选项和游戏开头的各个画面能用鼠标操作；对话能用左键推进；道具页面能用鼠标；过场暂停时能用左键跳过。
+  - 方向键、鼠标中键重设视角，以及用滚轮拉近拉远镜头。
+  - 场景里的 Esc。
+  - 手柄配置选 Xbox 时的按键图标。
+  - 菜单「确定」的改键。
+- 这次新加入、实机试玩已确认的：
+  - 用手柄操作菜单时，鼠标指针会隐藏；一动鼠标就会再出现。
+  - 商店：选择买或卖、商品清单和卖出清单都能用鼠标操作，卖出清单换了分类页后也一样。
+  - 任务日志：可以用鼠标打开任务、选择缩略图、查看任务内容和返回；切换显示方式的分页，以及缩略图和列表的切换，也能用鼠标，切到列表后同样可以用。
+  - 世界地图：地图和区域清单，以及传送画面右边的地点清单，都能用鼠标选择。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **各向异性过滤**：图形设定多了一行，可以选游戏原值、2x、4x、8x 或 16x，改了下一帧就生效。默认是游戏原值。用来让远处斜看的地面和甲板在较高的倍率下保留更多细节，例如木纹和板缝。
+- 缺少 DLSS 多帧生成或 Reflex 需要的文件时，设定里这两个选项会变灰，并标示无法使用。
+
+#### 正在调查
+
+- 2026-11-10 记下的开启帧生成时画面送出节奏不均匀：重新自动量测后，送出的节奏是均匀的。原本不均匀的原因还没有确定。实际的手感和画面还等实机确认。
+- 实机试玩时，角色设置还不能用鼠标，修正正在测试。
+- 4K 时，游戏文字比按键图标模糊：原因已经找到，修正正在测试。
+
+### English
+
+#### Fixed
+
+- Holding two movement keys at once now walks diagonally; before, the character only walked straight. Confirmed in hands-on play.
+- Main menu entries that are still locked (shown as "???") no longer light up under the mouse, and clicking them does not open them. Confirmed in hands-on play.
+- With the Nintendo layout, the L, R, ZL and ZR button icons now have the same shapes as in the original game; confirmed in hands-on play. The shoulder and trigger icons of the Xbox and PlayStation layouts changed too; that part awaits hands-on testing.
+- With the Nintendo layout, after the D-pad is rebound, button prompts show the game's own icons (they used to show arrows); at 4K, button icons inside text are all replaced with sharp versions. Merged, awaiting hands-on testing.
+
+#### Confirmed in hands-on play
+
+- Keyboard, mouse and gamepad features listed as awaiting hands-on testing on 2026-11-09 and 2026-11-10 that hands-on play has now confirmed:
+  - No control device to choose in the settings; the key rebinding entry opens.
+  - The title screen options and the screens at the start of the game work with the mouse; left click advances dialogue; the item page works with the mouse; left click skips from a paused cutscene.
+  - The arrow keys, the middle mouse button resetting the camera, and zooming the camera with the wheel.
+  - Esc in the field.
+  - Button icons with the Xbox gamepad layout.
+  - Rebinding menu Confirm.
+- New this time, and confirmed in hands-on play:
+  - When menus are used with a gamepad, the mouse cursor hides; it comes back as soon as the mouse moves.
+  - Shops: choosing to buy or sell, the goods list and the sell list work with the mouse, including the sell list after switching category tabs.
+  - Quest log: the mouse opens quests, selects thumbnails, shows quest details and goes back; the display tabs and the switch between thumbnails and list work with the mouse too, and so does the list view.
+  - World map: the maps, the area list and the location list on the right of the fast travel screen can all be selected with the mouse.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Anisotropic filtering**: a new row in the graphics settings: the game's value, 2x, 4x, 8x or 16x; a change takes effect from the next frame. The default is the game's value. Meant to keep more detail, such as wood grain and plank gaps, on distant ground and decks seen at an angle at the higher levels.
+- When files needed by DLSS Multi Frame Generation or Reflex are missing, those two settings are greyed out and marked as unavailable.
+
+#### Under investigation
+
+- The uneven frame pacing with frame generation noted on 2026-11-10: automatic measurements taken again showed even pacing. Why it was uneven before is not established. How it feels and looks in play still awaits hands-on testing.
+- In hands-on play, the character pages still don't work with the mouse; a fix is being tested.
+- At 4K, game text is blurrier than button icons: the cause has been found, and a fix is being tested.
+
 ## 2026-11-10
 
 ### 简体中文
