@@ -8,6 +8,23 @@
 > This repository contains documentation only. It provides no builds, no downloads and no game files.
 > 本仓库只有说明文件，不提供任何构建产物、下载或游戏文件。
 
+> [!IMPORTANT]
+> **Experimental: toward the Nintendo Switch 2 Edition**
+>
+> We have started an experiment to bring what the Nintendo Switch 2 Edition improves, starting with higher-quality assets and possibly its new content later, into this PC version. It builds on the original Switch version; it is not a separate port of the Switch 2 Edition.
+>
+> It is research for now, and how far it can go is not known yet. If it works out, it may become the final goal of "Xenoblade Chronicles 2: REFORGED Edition".
+>
+> There is no promise of a source release, and this repository does not explain how to use it to play the game. The techniques behind it will be shared later in lawful ways, such as the implementation guides listed below. This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, and will not show its screenshots or official promotional art.
+>
+> **实验中：向 Nintendo Switch 2 Edition 看齐**
+>
+> 我们开始了一项实验：把 Nintendo Switch 2 Edition 带来的改进吸收进这个 PC 版本，先从更高画质的素材开始，之后可能包括它新增的内容。做法是在原本 Switch 版的基础上升级，而不是另做一个 Switch 2 Edition 的移植。
+>
+> 目前还在研究阶段，能做到哪一步还不知道。如果可行，它可能成为《异度神剑 2：REFORGED Edition》的最终目标。
+>
+> 不承诺开源，本仓库也不会说明如何用它来游玩。相关技术之后会以合法的方式公开，例如下方列出的实现指南。本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不会放它的截图或官方宣传图。
+
 ## 关于这个项目
 
 这款游戏已经有可以游玩的 PC 版本。这个项目的目标不同：不是“能玩”，而是一套完整、接近重制的 PC 原生体验——在画面、流畅度和操作上超越原版与模拟器，并且从设定画面到键鼠操作，都要像一款真正的 PC 游戏。
@@ -39,8 +56,8 @@ The source code is not public because this is, first of all, something I'm makin
 | 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
 | 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 已完成，指南准备中 |  |
-| 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 已完成，指南准备中 |  |
-| 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 已完成，指南准备中 |  |
+| 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
+| 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动 | 开发中 |  |
 | 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 开发中 |  |
 | 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 开发中 |  |
@@ -60,8 +77,8 @@ Below are the project's signature features and their current status. When each o
 | 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
 | 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Done, guide in preparation |  |
-| 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Done, guide in preparation |  |
-| 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Done, guide in preparation |  |
+| 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
+| 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus | In development |  |
 | 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | In development |  |
 | 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | In development |  |
@@ -211,9 +228,9 @@ adds the plans for the final version and long-term ideas.
 #### Planned: long-term ideas
 
 Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional
-gameplay mods, system mods, ray-traced shadows (research) and original features inspired by content added in the
-Nintendo Switch 2 Edition. Every mod that changes gameplay or balance will be optional; by default the game plays as
-the original.
+gameplay mods, system mods, ray-traced shadows (research) and an experiment to bring the Nintendo Switch 2 Edition's
+improvements into this version (see the top of this page). Every mod that changes gameplay or balance will be optional;
+by default the game plays as the original.
 
 ### Distribution
 
@@ -226,7 +243,7 @@ the original.
 
 XC2-Recomp is an independent, non-commercial fan project. It is not affiliated with, endorsed by or sponsored by
 Nintendo, Monolith Soft or any other company named here, and it is not an official PC version of the game. Nintendo
-and Monolith Soft retain all rights to the game and its assets. *Xenoblade Chronicles* and *Nintendo Switch* are
+and Monolith Soft retain all rights to the game and its assets. *Xenoblade Chronicles*, *Nintendo Switch* and *Nintendo Switch 2* are
 trademarks of Nintendo. NVIDIA, DLSS, G-SYNC and Reflex are trademarks of NVIDIA; AMD, FSR and FreeSync are
 trademarks of AMD. All other trademarks belong to their respective owners.
 
@@ -367,7 +384,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 #### 目标：长期构想
 
 除上述功能外，[路线图](ROADMAP.md)还列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
-光线追踪阴影（研究方向），以及参考 Nintendo Switch 2 Edition 新增内容的原创实现。所有会改变玩法或平衡的 Mod
+光线追踪阴影（研究方向），以及把 Nintendo Switch 2 Edition 的改进吸收进这个版本的实验（见本页开头）。所有会改变玩法或平衡的 Mod
 都是可选的，默认保持原版体验。
 
 ### 发布说明
@@ -380,7 +397,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 XC2-Recomp 是独立、非商业的爱好者项目，与任天堂（Nintendo）、Monolith Soft 及本文提到的任何其他公司都没有
 关系，未获得其认可或赞助，也不是本游戏的官方 PC 版。任天堂与 Monolith Soft 保有本游戏及其素材的一切权利。
-*Xenoblade Chronicles*（异度神剑）与 *Nintendo Switch* 是任天堂的商标；NVIDIA、DLSS、G-SYNC 与 Reflex 是
+*Xenoblade Chronicles*（异度神剑）、*Nintendo Switch* 与 *Nintendo Switch 2* 是任天堂的商标；NVIDIA、DLSS、G-SYNC 与 Reflex 是
 NVIDIA 的商标；AMD、FSR 与 FreeSync 是 AMD 的商标。其他商标均属于各自的权利人。
 
 未包含任何 GPL 授权的代码，也未使用任何泄露或保密的 SDK 资料。

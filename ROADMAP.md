@@ -93,11 +93,14 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 - Ray-traced shadows
 
-#### Inspired by the Nintendo Switch 2 Edition
+#### Toward the Nintendo Switch 2 Edition (experimental)
 
-Original implementations of ideas from content added in the Nintendo Switch 2 Edition, such as action-based
-Mercenary missions and M.O.M.O.-related content. They would be built independently on the original Switch version.
-No Switch 2 Edition assets, screenshots or official promotional art will be used.
+Bringing the Nintendo Switch 2 Edition's improvements into this version, starting with higher-quality assets. Its new
+content, such as action-based Mercenary missions and M.O.M.O.-related content, would only be added once research
+confirms it can be brought in on top of the original Switch version. There is no promise of a source release; the
+techniques behind it will be shared later in lawful ways. This repository will not provide any Switch 2 Edition
+files, assets, keys or extraction tools, and will not show its screenshots or official promotional art. This section
+replaces the earlier plan of using no Switch 2 Edition assets and building only original implementations.
 
 ---
 
@@ -188,7 +191,6 @@ No Switch 2 Edition assets, screenshots or official promotional art will be used
 
 - 光线追踪阴影
 
-#### 参考 Nintendo Switch 2 Edition 的新增内容
+#### 向 Nintendo Switch 2 Edition 看齐（实验中）
 
-参考 Nintendo Switch 2 Edition 新增内容的原创实现，例如佣兵团行动、M.O.M.O. 相关内容等，以初代 Switch 版为
-基础独立实现。不使用任何 Switch 2 版的素材、截图或官方宣传图。
+把 Nintendo Switch 2 Edition 的改进吸收进这个版本：先从更高画质的素材开始；它新增的内容，例如佣兵团行动和 M.O.M.O. 相关内容，要等研究确认能在原本 Switch 版的基础上接入才会做。不承诺开源，相关技术之后会以合法的方式公开。本仓库不提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不放它的截图或官方宣传图。这一节取代之前「不使用任何 Switch 2 版素材、只做原创实现」的计划。
