@@ -7,6 +7,11 @@
 > [!NOTE]
 > This repository contains documentation only. It provides no builds, no downloads and no game files.
 > 本仓库只有说明文件，不提供任何构建产物、下载或游戏文件。
+>
+> **Early demo: nearly done.** It is only a showcase: there is no download, and it is not a playable release. Its outline
+> was set early in the project, so many of the features listed here are not in it.
+>
+> **初期演示：接近完成。** 这只是展示用，不提供下载，也不是可游玩的发布。它的框架在立项初期就定下了，所以这里列出的许多功能并没有放进去。
 
 > [!IMPORTANT]
 > **Experimental: toward the Nintendo Switch 2 Edition**
@@ -27,17 +32,17 @@
 
 ## 关于这个项目
 
-这款游戏已经有可以游玩的 PC 版本。这个项目的目标不同：不是“能玩”，而是一套完整、接近重制的 PC 原生体验——在画面、流畅度和操作上超越原版与模拟器，并且从设定画面到键鼠操作，都要像一款真正的 PC 游戏。
+这个项目是一项研究：让这款游戏在 PC 上尽可能完美——在画面、流畅度和操作上做出一套完整、接近重制的 PC 原生体验，从设定画面到键鼠操作，都像一款真正的 PC 游戏。它不以发布可游玩的版本为目标，也不说明如何用它来游玩。研究得到的技术会写成实现指南公开；想在可游玩的 PC 移植版中使用这些功能，欢迎依照指南自行合并。
 
-最终版本预计命名为《异度神剑 2：REFORGED Edition》（非官方粉丝作品，与任天堂及 Monolith Soft 无关）。
+《异度神剑 2：REFORGED Edition》（非官方粉丝作品，与任天堂及 Monolith Soft 无关）是这项研究想达到的最终形态，也是我给自己游玩的版本取的名字；它不会发布。对应的 logo 之后会制作，希望以后的整合者可以拿去用。
 
 我不公开源码，因为这首先是做给我自己玩的：当年我没能把这款游戏玩完，这次想用自己最满意的方式重新走一遍。公开这些进展，是希望看到这份工作的人知道它的出发点。
 
 ## About this project
 
-Playable PC versions of this game already exist. This project has a different goal: not just "playable", but a complete, near-remake native PC experience — surpassing the original and emulation in visuals, smoothness and controls, and feeling like a true PC game, from the settings menu to mouse-and-keyboard support.
+This project is research into making this game as good as it can be on PC: a complete, near-remake native PC experience in visuals, smoothness and controls, that feels like a true PC game from the settings menu to mouse-and-keyboard support. It does not aim to release a playable version and does not explain how to play the game with it. Its techniques are published as implementation guides; anyone who wants these features in a playable PC port is welcome to merge them by following the guides.
 
-The final version is planned as "Xenoblade Chronicles 2: REFORGED Edition" (an unofficial fan work, not affiliated with Nintendo or Monolith Soft).
+"Xenoblade Chronicles 2: REFORGED Edition" (an unofficial fan work, not affiliated with Nintendo or Monolith Soft) is the final form this research aims for, and also my name for the version I play myself; it will not be released. A logo for it will be made, and I hope future integrators will use it.
 
 The source code is not public because this is, first of all, something I'm making for myself: I never finished the game back then, and this time I want to play it through the way I've always wanted. I share the progress so that anyone who sees this work knows where it comes from.
 
@@ -55,12 +60,12 @@ The source code is not public because this is, first of all, something I'm makin
 | 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
-| 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 已完成，指南准备中 |  |
+| 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/settings) |
 | 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
-| 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动 | 开发中 |  |
-| 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 开发中 |  |
-| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 开发中 |  |
+| 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动 | 接近完成 |  |
+| 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 接近完成 |  |
+| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 接近完成（DLSS 2 倍已实机确认；3 倍以上与 FSR 帧生成尚未） |  |
 
 ## Giving back
 
@@ -76,12 +81,12 @@ Below are the project's signature features and their current status. When each o
 | 4 | Exclusive fullscreen | A true exclusive mode next to borderless, with Alt+Tab and F11 handled | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
 | 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
-| 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Done, guide in preparation |  |
+| 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/settings) |
 | 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
-| 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus | In development |  |
-| 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | In development |  |
-| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | In development |  |
+| 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus | Nearly done |  |
+| 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | Nearly done |  |
+| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Nearly done (DLSS 2x confirmed in hands-on play; 3x and higher, and FSR Frame Generation, not yet) |  |
 
 [开发日志／Development log](DEVLOG.md)
 
@@ -99,12 +104,13 @@ Below are the project's signature features and their current status. When each o
 
 ### Overview
 
-XC2-Recomp is a native Windows port of *Xenoblade Chronicles 2* for Nintendo Switch, made by static
-recompilation. It is not an emulator, and not a Yuzu / Ryujinx bundle.
+XC2-Recomp is research into a native Windows port of *Xenoblade Chronicles 2* for Nintendo Switch, made by
+static recompilation. It is not an emulator, and not a Yuzu / Ryujinx bundle.
 
 - **Target version:** the Japanese release for the original Nintendo Switch (Program ID `0100F3400332C000`),
   update 3.0.0. This release includes Japanese, Traditional Chinese and Simplified Chinese text.
-- **You need your own game:** playing requires a copy of the game that you own and have legally dumped yourself.
+- **No playable version:** this project does not provide a playable version of the game, and it does not explain how
+  to play the game with it.
 - **No game content here:** this project does not include or distribute any game content, keys or decryption
   tools, and it does not explain how to dump or decrypt a game.
 
@@ -114,21 +120,21 @@ First and foremost, I would like to express my sincere appreciation to **TheMona
 
 Monado's achievements in bringing Nintendo Switch games natively to PC have been a genuine source of inspiration for me.
 
-I understand that TheMonadoGuy is also working on a PC version of Xenoblade Chronicles 2.
+I would like to make one thing clear: **XC2-Recomp does not compete with any PC version of this game or any project working toward one:** not with TheMonadoGuy and Monado, which inspired this project, and not with those that came later, such as AksharDP's xc2-recomp.
 
-I would like to make one thing clear: **XC2-Recomp was not created with the intention of directly competing with Monado or its author.**
+I've reached out to AksharDP about working together. There has been no reply so far, which is completely fine: the guides here are just as open to xc2-recomp, and anyone is welcome to merge them whenever they're useful.
 
-This project follows its own development direction, with a particular focus on the needs of Chinese-speaking players, including Chinese-language compatibility, regional game-version support, usability, and PC-oriented enhancements.
+This project follows its own research direction, with a particular focus on the Japanese 3.0.0 release and its Chinese text, and on PC-oriented enhancements.
 
-I am also looking forward to seeing TheMonadoGuy's upcoming XC2 project.
+Whatever TheMonadoGuy works on next, I wish them all the best.
 
-If the opportunity arises, I would be very happy to exchange ideas or collaborate. Should the author choose to make the relevant work available under suitable terms, I would also welcome the opportunity to contribute to or build upon it, with the author's permission and in accordance with its licensing conditions.
+If the opportunity arises, I would be very happy to exchange ideas or collaborate.
 
-Whether our projects remain independent or eventually find opportunities to collaborate, I hope they can contribute to each other's progress and ultimately provide a better Xenoblade Chronicles 2 experience for players.
+Whether projects stay independent or find chances to collaborate, I hope they can help each other move forward, and that the guides here are useful to all of them.
 
 My sincere thanks again to TheMonadoGuy for the inspiration and contributions.
 
-My thanks also to AksharDP and jmars125 for the research they have shared publicly in xc2-recomp.
+My thanks also to AksharDP for the research shared publicly in xc2-recomp, and to jmars125 for xcx-recomp, which it is built on.
 
 #### Technical Acknowledgements
 
@@ -150,14 +156,14 @@ Thanks to the following open-source projects. Each keeps its own license.
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
 | Monado (TheMonadoGuy) | MIT |
 | [xcx-recomp](https://github.com/jmars125/xcx-recomp) (jmars125) | MIT |
-| xc2-recomp ([AksharDP](https://github.com/AksharDP/xc2-recomp), [jmars125](https://github.com/jmars125/xc2-recomp)) | MIT |
+| [xc2-recomp](https://github.com/AksharDP/xc2-recomp) (AksharDP) | MIT |
 | xc3_lib | MIT |
 | xenomods | MIT |
 
 ### Features
 
-Features are listed in two groups: Implemented and Planned. The [roadmap](ROADMAP.md) lists the same features and
-adds the plans for the final version and long-term ideas.
+Features are listed in three groups: Implemented, Nearly done and Planned. The [roadmap](ROADMAP.md) lists the same
+features and adds the final form this research aims for, and long-term ideas.
 
 #### Implemented
 
@@ -178,7 +184,7 @@ adds the plans for the final version and long-term ideas.
 
 **Performance**
 
-- 60 fps and higher
+- 60 fps and higher (battles and events stay at 30 fps for now)
 - Frame rate caps: 30, 60, 120, 144, 165 or unlimited
 - V-sync options
 - Variable refresh rate (G-SYNC / FreeSync)
@@ -187,7 +193,7 @@ adds the plans for the final version and long-term ideas.
 **Controls**
 
 - Keyboard and mouse: mouse camera control, number keys for Arts, and fully rebindable keys
-- Input device switching between controller and keyboard and mouse
+- Automatic switching between controller and keyboard and mouse
 - Button prompts for Xbox, PlayStation and Nintendo controller layouts
 
 **Mods**
@@ -202,28 +208,32 @@ adds the plans for the final version and long-term ideas.
 
 - Logs, and a crash report saved automatically if the game crashes
 
-#### Planned
+#### Nearly done
 
 **Graphics**
 
 - Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
-  or to cutscenes only
-- More texture quality levels (High, Max)
-- Model detail (LOD) levels
+  or to cutscenes only (DLSS 2x confirmed in hands-on play; 3x and higher, and FSR Frame Generation, not yet)
 
 **Performance**
 
 - NVIDIA Reflex for lower latency
-- Less stutter on first visits to new places
-- Automatic tuning to your RAM, GPU and CPU cores
 
 **Controls**
 
 - Direct mouse control of menus
 
-**Testing**
+#### Planned
 
-- Developer test build
+**Graphics**
+
+- More texture quality levels (High, Max)
+- Model detail (LOD) levels
+
+**Performance**
+
+- Less stutter on first visits to new places
+- Automatic tuning to your RAM, GPU and CPU cores
 
 #### Planned: long-term ideas
 
@@ -234,8 +244,9 @@ by default the game plays as the original.
 
 ### Distribution
 
-- This repository does not and will not provide game executables, ExeFS / RomFS, keys, firmware, DLC, game assets,
-  decryption tools or download links. Requests for any of these will be closed.
+- No playable version will be released. This repository does not and will not provide game executables,
+  ExeFS / RomFS, keys, firmware, DLC, game assets, decryption tools or download links. Requests for any of these
+  will be closed.
 - Any source code or tools published later will first be reviewed for licensing, provenance and redistribution
   rights.
 
@@ -259,12 +270,12 @@ No license has been chosen yet.
 
 ### 项目简介
 
-XC2-Recomp 是 Nintendo Switch 版《异度神剑 2》的 Windows 原生移植，采用静态重编译。本项目不是模拟器，也不是
+XC2-Recomp 是一项研究：以静态重编译把 Nintendo Switch 版《异度神剑 2》原生移植到 Windows。本项目不是模拟器，也不是
 Yuzu／Ryujinx 整合包。
 
 - **目标版本**：初代 Nintendo Switch 的日版（Program ID `0100F3400332C000`），3.0.0 更新。此版本内含日文、
   繁体中文与简体中文。
-- **需要你自己的游戏**：游玩时需要你自己拥有、并由你自行合法提取（dump）的游戏。
+- **不提供可游玩的版本**：本项目不提供可游玩的版本，也不说明如何用它来游玩。
 - **这里没有任何游戏内容**：本项目不包含、也不分发任何游戏内容、密钥或解密工具，也不说明如何提取或解密游戏。
 
 ### 致谢与项目定位
@@ -273,21 +284,21 @@ Yuzu／Ryujinx 整合包。
 
 Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给了我很大的启发，也让我更加期待《异度神剑》系列能够在 PC 平台上获得更完整的游戏体验。
 
-我了解到，TheMonadoGuy 目前也正在开发《异度神剑 2》（Xenoblade Chronicles 2）的 PC 版本。
+我希望特别说明：**XC2-Recomp 不与任何《异度神剑 2》PC 版本或朝这个方向努力的项目竞争**——无论是启发了这个项目的 TheMonadoGuy 与 Monado，还是之后出现的项目，例如 AksharDP 的 xc2-recomp。
 
-我希望特别说明：**XC2-Recomp 并不是为了与 Monado 作者直接竞争而建立的项目。**
+我曾向 AksharDP 表达合作的意愿，目前还没有收到回复，这完全没关系：这里的指南对 xc2-recomp 同样开放，任何时候觉得有用，都欢迎合并。
 
-这个项目有自己的开发方向，尤其希望提前考虑中文玩家的实际需求，包括中文语言支持、游戏版本兼容性、操作体验，以及符合 PC 玩家习惯的画面设置与功能扩展。
+这个项目有自己的研究方向，尤其着重于日版 3.0.0 及其中文文字，以及符合 PC 玩家习惯的画面设置与功能扩展。
 
-我同样期待 TheMonadoGuy 未来公开的 XC2 项目。
+无论 TheMonadoGuy 接下来做什么，我都衷心祝福。
 
-如果条件允许，我非常愿意与作者交流、合作；如果未来作者愿意开放相关成果，并且许可条件允许，我也希望有机会在其工作基础上继续研究和改进，而不是重复投入已经解决的问题。
+如果条件允许，我非常愿意与作者交流、合作。
 
-无论两个项目最终以独立还是合作的方式发展，我都希望它们能够互相促进，让更多玩家享受到更好的《异度神剑 2》PC 游戏体验。
+无论各个项目独立发展还是有机会合作，我都希望大家能够互相促进，也希望这里的指南对每个项目都有帮助。
 
 再次感谢 TheMonadoGuy 的贡献与启发。
 
-同时感谢 AksharDP 和 jmars125 的 xc2-recomp 公开的研究成果。
+同时感谢 AksharDP 在 xc2-recomp 公开的研究成果，以及 jmars125 的 xcx-recomp（xc2-recomp 以它为基础）。
 
 #### 技术致谢
 
@@ -309,13 +320,13 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 | [Savage Wind Recomp](https://github.com/Revivedx/SavageWindRecomp) | MIT |
 | Monado（TheMonadoGuy） | MIT |
 | [xcx-recomp](https://github.com/jmars125/xcx-recomp)（jmars125） | MIT |
-| xc2-recomp（[AksharDP](https://github.com/AksharDP/xc2-recomp)、[jmars125](https://github.com/jmars125/xc2-recomp)） | MIT |
+| [xc2-recomp](https://github.com/AksharDP/xc2-recomp)（AksharDP） | MIT |
 | xc3_lib | MIT |
 | xenomods | MIT |
 
 ### 功能
 
-功能分为两组：已实现与目标。[路线图](ROADMAP.md)列出同样的功能，并加上最终版本的规划与长期构想。
+功能分为三组：已实现、接近完成与目标。[路线图](ROADMAP.md)列出同样的功能，并加上这项研究想达到的最终形态与长期构想。
 
 #### 已实现
 
@@ -335,7 +346,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 **性能**
 
-- 60 fps 以上
+- 60 fps 以上（战斗和事件暂时维持 30 fps）
 - 锁帧档位：30、60、120、144、165、不限
 - 垂直同步选项
 - 可变刷新率（G-SYNC／FreeSync）
@@ -344,7 +355,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 **操作**
 
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键都可以自由改键
-- 在手柄与键盘鼠标之间切换操作设备
+- 在手柄与键盘鼠标之间自动切换
 - 按键图标（Xbox、PlayStation、任天堂配置）
 
 **Mod**
@@ -359,27 +370,31 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - 日志；游戏崩溃时自动保存崩溃报告
 
-#### 目标
+#### 接近完成
 
 **画面**
 
-- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中
-- 更多材质质量档位（高、最高）
-- 模型细节（LOD）档位
+- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中（DLSS 2 倍已实机确认；3 倍以上与 FSR 帧生成尚未）
 
 **性能**
 
 - NVIDIA Reflex，降低延迟
-- 减少首次进入新场景时的卡顿
-- 根据内存、GPU 与 CPU 核心数自动调整
 
 **操作**
 
 - 鼠标直接操作菜单
 
-**测试**
+#### 目标
 
-- 开发者测试版
+**画面**
+
+- 更多材质质量档位（高、最高）
+- 模型细节（LOD）档位
+
+**性能**
+
+- 减少首次进入新场景时的卡顿
+- 根据内存、GPU 与 CPU 核心数自动调整
 
 #### 目标：长期构想
 
@@ -389,7 +404,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 ### 发布说明
 
-- 本仓库现在不会、将来也不会提供游戏可执行文件、ExeFS／RomFS、密钥、固件、DLC、游戏资源、解密工具或下载链接。
+- 不会发布可游玩的版本。本仓库现在不会、将来也不会提供游戏可执行文件、ExeFS／RomFS、密钥、固件、DLC、游戏资源、解密工具或下载链接。
   索取以上内容的 Issue 会直接关闭。
 - 将来公开的任何源代码或工具，都会先经过授权、来源与可再分发性的审查。
 

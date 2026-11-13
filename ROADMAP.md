@@ -6,7 +6,7 @@
 
 ## English
 
-Features are listed in two groups: Implemented and Planned.
+Features are listed in three groups: Implemented, Nearly done and Planned.
 
 ### Implemented
 
@@ -20,34 +20,41 @@ Features are listed in two groups: Implemented and Planned.
 - Texture quality setting, with support for high-resolution texture replacement
 - Anisotropic filtering setting
 - Switches for depth of field and motion blur
-- 60 fps and higher
+- 60 fps and higher (battles and events stay at 30 fps for now)
 - V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited)
 - Variable refresh rate (G-SYNC / FreeSync)
 - Background shader precompilation
 - Keyboard and mouse: mouse camera, number keys for Arts, full key rebinding
-- Input device switching between controller and keyboard and mouse
+- Automatic switching between controller and keyboard and mouse
 - Button prompts for Xbox, PlayStation and Nintendo controller layouts
 - RomFS mods in the Ryujinx / yuzu folder layout, loaded without changing the original files
 - Save protection: automatic backups and recovery from damaged saves
 - Logs and automatic crash reports
 
+### Nearly done
+
+- NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only (DLSS 2x
+  confirmed in hands-on play; 3x and higher, and FSR Frame Generation, not yet)
+- NVIDIA Reflex
+- Direct mouse control of menus
+
 ### Planned
 
-- NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only
-- NVIDIA Reflex
 - More texture quality levels (High, Max)
 - Model detail (LOD) levels
 - Less stutter on first visits to new places
 - Automatic tuning to your RAM, GPU and CPU cores
-- Direct mouse control of menus
-- Developer test build
 
-### Planned: final version (if released)
+### Research goal: the final form
 
-- Choose a mode when starting a new game: Classic (the original experience) or Enhanced (quality-of-life mods enabled
-  in advance)
+The final form this research aims for is "Xenoblade Chronicles 2: REFORGED Edition"
+(see [About this project](README.md#about-this-project)). It is a research goal, not a release: no playable version
+will be released.
+
+- A choice of mode when starting a new game: Classic (the original experience) or Enhanced (quality-of-life mods
+  enabled in advance)
 - Multiple save slots
-- Turn mods on and off individually in the settings menu, with support for mods you install yourself
+- Mods turned on and off one by one in the settings menu, including mods added separately
 - Selected community mods integrated in advance, with their authors' permission, in a form that contains no game files
 
 ### Planned: long-term ideas
@@ -106,7 +113,7 @@ replaces the earlier plan of using no Switch 2 Edition assets and building only 
 
 ## 简体中文
 
-功能分为两组：已实现与目标。
+功能分为三组：已实现、接近完成与目标。
 
 ### 已实现
 
@@ -119,34 +126,38 @@ replaces the earlier plan of using no Switch 2 Edition assets and building only 
 - 材质质量设置，支持高分辨率贴图替换
 - 各向异性过滤设置
 - 景深与动态模糊开关
-- 60 fps 以上
+- 60 fps 以上（战斗和事件暂时维持 30 fps）
 - 垂直同步与锁帧档位（30／60／120／144／165／不限）
 - 可变刷新率（G-SYNC／FreeSync）
 - 后台预编译着色器
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键自由改键
-- 在手柄与键盘鼠标之间切换操作设备
+- 在手柄与键盘鼠标之间自动切换
 - 按键图标（Xbox、PlayStation、任天堂配置）
 - 支持 Ryujinx／yuzu 文件夹格式的 RomFS mod，加载时不修改原始文件
 - 存档保护：自动备份，存档损坏时可以恢复
 - 日志与自动崩溃报告
 
+### 接近完成
+
+- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 倍已实机确认；3 倍以上与 FSR 帧生成尚未）
+- NVIDIA Reflex
+- 鼠标直接操作菜单
+
 ### 目标
 
-- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中
-- NVIDIA Reflex
 - 更多材质质量档位（高、最高）
 - 模型细节（LOD）档位
 - 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
-- 鼠标直接操作菜单
-- 开发者测试版
 
-### 目标：最终版本（若发布）
+### 研究目标：最终形态
 
-- 开始新游戏时选择模式：经典模式（原版体验）或增强模式（预先开启优化 Mod）
+这项研究想达到的最终形态是《异度神剑 2：REFORGED Edition》（见[关于这个项目](README.md#关于这个项目)）。这是研究目标，不是发布计划：不会发布可游玩的版本。
+
+- 开始新游戏时可以选择模式：经典模式（原版体验）或增强模式（预先开启优化 Mod）
 - 多个存档位
-- 在设置菜单里分别开关 Mod，并支持玩家自行安装的 Mod
-- 预先整合经作者同意的优秀 Mod（以不包含游戏文件的形式提供）
+- 在设置菜单里分别开关 Mod，并支持另外加入的 Mod
+- 预先整合经作者同意的优秀 Mod（不包含游戏文件）
 
 ### 目标：长期构想
 
