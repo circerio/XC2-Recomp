@@ -4,6 +4,94 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-14
+
+### 简体中文
+
+这一篇也包括 2026-11-13 那次更新之后、当天合并的项目。
+
+#### 已解决的问题
+
+- 4K 时，某些地方转动镜头后，地面、墙面和角色会出现大片黑块：画贴花时读取的法线图被当成固定 720p 的大小。现在按画面的比例读取。实机试玩已确认。
+- 4K 时，主菜单一块界面底板的左端有一条竖直的黑线：取样时绕到了图的另一边。现在不会了。实机试玩已确认。
+- 菜单的鼠标操作（实机试玩发现的问题和意见）。实机试玩已确认。
+  - 任务清单左右两个翻页箭头：2026-11-13 记为可以点了，实机试玩时还不能换页；现在点一下换一页。
+  - 世界地图上，鼠标移出游戏指针能移动的范围时，以前两个指针都看不到；现在鼠标指针会出现，在那里点击也不会选到地图上的东西。移回地图上，鼠标指针隐藏，游戏的指针跟着鼠标；来回跨过边界时不会闪烁。
+  - 角色的牵绊圆环上，鼠标移到下方的文字列时，鼠标指针会出现，不再闪烁。
+  - 前往旅店时出现的说明文字，可以用左键推进。
+  - 花的定制里，「零件制造」和「设置零件」里的清单，每一行都能用鼠标指到，滚轮可以滚动材料清单。
+  - 花的定制里，左边零件格每一列的第二、第三个图标也能直接用鼠标点到（以前只能点到第一个）。
+
+#### 实机试玩已确认
+
+- 2026-11-13 记为等待实机验证、这次实机试玩确认了的：
+  - 在我们的设定页里，对会打开下一页的选项按左或右，不再闪退。
+  - 世界地图上点空白处，游戏不再问要不要传送。
+  - 游戏自己的指针跟着鼠标时，鼠标指针会隐藏。
+  - 角色的牵绊圆环点一下就学。
+  - 商店的数量画面按 Enter 也能购买。
+  - 用滚轮滚动清单后，鼠标停留的位置不再抢走选取。
+  - 只有分页列的画面保留鼠标指针，分页也能点。
+  - 花的定制里，「零件制造」和「设置零件」的分类可以用鼠标选。
+  - 任务完成的画面可以用左键跳过。
+- 这次新加入、实机试玩已确认的：
+  - **超分辨率的质量不用重开游戏**：在同一种超分辨率里改质量，例如从「质量」改成「性能」或 DLAA，马上生效。实机试玩确认的是 DLSS；FSR 等待实机验证。
+  - **DLSS 多帧生成的倍数不用重开游戏**：帧生成开着时，在 2 到 6 倍之间切换，马上生效（菜单最多列到显卡和驱动支持的倍数）。打开或关闭帧生成本身仍要重新启动游戏。
+  - **HDR 可以在游戏开着时才打开**：游戏开着时在 Windows 里打开 HDR，设定里 HDR 那一行就可以选，选了就生效，不用重开。
+  - **纸白跟随 Windows**：HDR 开着、纸白选「跟随 Windows」时，游戏开着时调整 Windows 的 SDR 内容亮度，画面也会跟着变；以前只在启动时读取一次。实机试玩时由记录确认。
+  - VRR 那一行的说明写清楚了开启时游戏会做什么，以及 VRR 本身要在显卡驱动的设定里打开。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **抗锯齿不用重开游戏**：没开超分辨率时，在原本的 TAA、SMAA 和关闭之间切换，马上生效。SMAA 在启动时就先准备好，用来避免第一次切到 SMAA 时卡一下。
+- **Reflex**：启动时已载入的话，开关马上生效；启动时没载入的话，那一行会说明重新启动游戏后才生效。
+- 帧生成和 Reflex 那几行：选的和目前执行中的不同、要重新启动才生效时，那一行会说明。
+- **AMD FSR 帧生成和 NVIDIA Reflex 一起使用时的冲突已修正**：FSR 帧生成开着时，Reflex 不起作用，这是两边 SDK 的限制，设定里有说明。
+- **内存保护**：玩家游玩时，上限改为按电脑的内存计算（以前是固定值）。内存持续快速上涨时只写进日志和报告，游戏继续运行；真正用到上限时才停止游戏。因内存保护停止后，下次启动游戏时，标题画面会用游戏自己的对话框说明一次，报告的第一行也写明这不是崩溃。
+
+### English
+
+This entry also covers items merged on 2026-11-13, after that day's update.
+
+#### Fixed
+
+- At 4K, in some places, turning the camera left large black patches on the ground, walls and characters: a normal map read while drawing decals was treated as a fixed 720p size. It is now read at the picture's scale. Confirmed in hands-on play.
+- At 4K, a vertical black line ran down the left end of an interface panel in the main menu: sampling wrapped around to the other side of the image. It no longer does. Confirmed in hands-on play.
+- Mouse in menus (problems and feedback from hands-on play). Confirmed in hands-on play.
+  - The two page arrows of the quest list: listed as clickable on 2026-11-13, they still did not turn the page in hands-on play; one click now turns one page.
+  - On the world map, when the mouse left the area the game's pointer can move in, neither pointer could be seen; the mouse cursor now appears there, and a click there selects nothing on the map. Back over the map, the cursor hides and the game's pointer follows the mouse, with no flicker when crossing the edge.
+  - On a character's Affinity Chart, the mouse cursor appears over the text row at the bottom, with no more flicker.
+  - On the way to an inn, the explanation text can be advanced with left click.
+  - In Poppiswap, every row of the lists inside Create Parts and Set Parts can be pointed at with the mouse, and the wheel scrolls the materials list.
+  - In Poppiswap, the second and third icons in each row of the parts grid on the left can be clicked directly (before, only the first could).
+
+#### Confirmed in hands-on play
+
+- Listed as awaiting hands-on testing on 2026-11-13, now confirmed:
+  - In our settings pages, pressing left or right on a row that opens another page no longer crashes the game.
+  - On the world map, a click on empty space no longer makes the game ask whether to use Skip Travel.
+  - The mouse cursor hides while the game's own pointer follows the mouse.
+  - On a character's Affinity Chart, one click learns.
+  - On the quantity screen in shops, Enter buys too.
+  - After scrolling a list with the wheel, the hovered item no longer takes the selection.
+  - Screens with only a tab bar keep the mouse cursor, and the tabs can be clicked.
+  - In Poppiswap, the Create Parts and Set Parts categories can be selected with the mouse.
+  - Left click skips the quest-complete screen.
+- New this time, and confirmed in hands-on play:
+  - **Super resolution quality without a restart**: changing the quality within the same super resolution, such as from Quality to Performance or DLAA, takes effect at once. Confirmed with DLSS; FSR awaits hands-on testing.
+  - **DLSS Multi Frame Generation's multiplier without a restart**: with frame generation on, switching anywhere from 2x to 6x takes effect at once (the menu offers up to the highest multiplier the graphics card and driver support). Turning frame generation itself on or off still needs a restart.
+  - **HDR turned on while the game runs**: when HDR is turned on in Windows while the game is running, the HDR row in the settings becomes available and takes effect when chosen, with no restart.
+  - **Paper white following Windows**: with HDR on and paper white set to follow Windows, changing Windows' SDR content brightness while the game runs now changes the picture too; before, it was read only at start. Confirmed from the log of a hands-on play.
+  - The VRR row's description now says what the game does when it is on, and that VRR itself is turned on in the graphics driver's settings.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Anti-aliasing without a restart**: with no super resolution on, switching between the original TAA, SMAA and off takes effect at once. SMAA is prepared at start, meant to keep the first switch to it from stuttering.
+- **Reflex**: if it was loaded at start, turning it on or off takes effect at once; if it was not, its row says it takes effect after a restart.
+- The frame generation and Reflex rows say so when the choice differs from what is running and needs a restart.
+- **A conflict between AMD FSR Frame Generation and NVIDIA Reflex is fixed**: while FSR Frame Generation is on, Reflex does nothing, a limit of the two SDKs, and the settings say so.
+- **Memory guard**: during play, the limit now follows the PC's RAM (before, it was a fixed value). A steady, fast rise in memory use is only written to the log and a report, and the game keeps running; the game stops only when use reaches the limit. After such a stop, the next start explains it once on the title screen in the game's own dialog, and the report's first line says it was not a crash.
+
 ## 2026-11-13
 
 ### 简体中文

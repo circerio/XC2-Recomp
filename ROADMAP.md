@@ -34,7 +34,7 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 ### Nearly done
 
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only (DLSS 2x
-  confirmed in hands-on play; 3x and higher, and FSR Frame Generation, not yet)
+  to 6x confirmed in hands-on play; FSR Frame Generation not yet)
 - NVIDIA Reflex
 - Direct mouse control of menus
 
@@ -102,12 +102,22 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 #### Toward the Nintendo Switch 2 Edition (experimental)
 
-Bringing the Nintendo Switch 2 Edition's improvements into this version, starting with higher-quality assets. Its new
-content, such as action-based Mercenary missions and M.O.M.O.-related content, would only be added once research
-confirms it can be brought in on top of the original Switch version. There is no promise of a source release; the
-techniques behind it will be shared later in lawful ways. This repository will not provide any Switch 2 Edition
-files, assets, keys or extraction tools, and will not show its screenshots or official promotional art. This section
-replaces the earlier plan of using no Switch 2 Edition assets and building only original implementations.
+Bringing the Nintendo Switch 2 Edition's improvements into this version, on top of the original Switch version. Its 3D
+textures are at the same resolution as the original's, and from our comparison its models do not appear to be more
+detailed either, so the improvements to bring in are not in the 3D graphics. The plan, in order:
+
+1. UI art and fonts at twice the resolution, used only where they look better and fit with the icons we drew ourselves
+2. The pre-rendered videos replaced with 4K versions, kept in sync with the game
+3. New content that is mainly data, such as M.O.M.O., using slots the original game already reserves
+4. Content that needs new game code, such as action-based Mercenary missions: still being evaluated
+
+Every step that works out will become part of "Xenoblade Chronicles 2: REFORGED Edition", the final form of this
+research.
+
+There is no promise of a source release; the techniques behind it will be shared later in lawful ways. This repository
+will not provide any Switch 2 Edition files, assets, keys or extraction tools, and will not show its screenshots or
+official promotional art. This section replaces the earlier plan of using no Switch 2 Edition assets and building only
+original implementations.
 
 ---
 
@@ -139,7 +149,7 @@ replaces the earlier plan of using no Switch 2 Edition assets and building only 
 
 ### 接近完成
 
-- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 倍已实机确认；3 倍以上与 FSR 帧生成尚未）
+- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍已实机确认；FSR 帧生成尚未）
 - NVIDIA Reflex
 - 鼠标直接操作菜单
 
@@ -204,4 +214,13 @@ replaces the earlier plan of using no Switch 2 Edition assets and building only 
 
 #### 向 Nintendo Switch 2 Edition 看齐（实验中）
 
-把 Nintendo Switch 2 Edition 的改进吸收进这个版本：先从更高画质的素材开始；它新增的内容，例如佣兵团行动和 M.O.M.O. 相关内容，要等研究确认能在原本 Switch 版的基础上接入才会做。不承诺开源，相关技术之后会以合法的方式公开。本仓库不提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不放它的截图或官方宣传图。这一节取代之前「不使用任何 Switch 2 版素材、只做原创实现」的计划。
+把 Nintendo Switch 2 Edition 的改进吸收进这个版本，在原本 Switch 版的基础上进行。它的 3D 贴图和原版是相同的分辨率；从我们的比对看，模型也没有变得更精细，所以要吸收的改进不在 3D 画面上。计划依序是：
+
+1. 两倍分辨率的界面美术和字体，前提是看起来更好，并且和我们自己绘制的图标协调
+2. 预渲染的影片换成 4K 版本，并和游戏保持同步
+3. 以数据为主的新内容，例如 M.O.M.O.，使用原版已经预留的位置
+4. 需要新游戏程序的内容，例如佣兵团行动，还在评估
+
+做成的每一步，都会成为这项研究的最终形态《异度神剑 2：REFORGED Edition》的一部分。
+
+不承诺开源，相关技术之后会以合法的方式公开。本仓库不提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不放它的截图或官方宣传图。这一节取代之前「不使用任何 Switch 2 版素材、只做原创实现」的计划。
