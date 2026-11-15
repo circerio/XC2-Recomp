@@ -4,6 +4,38 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-15
+
+### 简体中文
+
+#### 已解决的问题
+
+- 菜单的鼠标滚轮（实机试玩的意见）。实机试玩已确认。
+  - 用滚轮滚动清单时，滚一格移动一行，滚动平顺，不会一下跳很远，停手就停。
+  - 滚动时，选取跟着清单边上、滚动方向那一端的那一行。
+  - 滚完后鼠标轻微晃动不会抢走选取，要移到别的行才会换。
+  - 滚到底再滚一格会选到最后一项，滚到顶则选到第一项。
+
+#### 实机试玩已确认
+
+- 这次新加入、实机试玩已确认的：
+  - **预渲染的影片换成 4K 版本**：预渲染的影片可以用 Nintendo Switch 2 Edition 的 4K 版本播放，播完照常回到游戏。所有影片都用工具逐支核对过帧数和长度，并从头到尾解码过一遍，没有错误；实机试玩确认了其中一支，画面和声音保持同步。这是 Switch 2 Edition 计划的第 2 步（见 [README](README.md) 开头）。
+
+### English
+
+#### Fixed
+
+- Mouse wheel in menus (feedback from hands-on play). Confirmed in hands-on play.
+  - Scrolling a list with the wheel moves one row per notch, smoothly, with no big jumps, and stops when the wheel stops.
+  - While scrolling, the selection follows the row at the edge of the list, on the side it is scrolling toward.
+  - After scrolling, small mouse movements no longer take the selection; it changes only when the mouse moves to another row.
+  - One more notch at the bottom selects the last item, and at the top the first item.
+
+#### Confirmed in hands-on play
+
+- New this time, and confirmed in hands-on play:
+  - **Pre-rendered videos replaced with 4K versions**: the pre-rendered videos can play as the Nintendo Switch 2 Edition's 4K versions, and the game carries on as usual when they end. Every video was checked one by one with a tool for frame count and length, and decoded from start to end with no errors; one of them was confirmed in hands-on play, with picture and sound in sync. This is step 2 of the Switch 2 Edition plan (see the top of the [README](README.md)).
+
 ## 2026-11-14
 
 ### 简体中文

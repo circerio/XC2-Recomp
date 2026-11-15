@@ -251,6 +251,17 @@ features and adds the final form this research aims for, and long-term ideas.
 - Less stutter on first visits to new places
 - Automatic tuning to your RAM, GPU and CPU cores
 
+**Controls**
+
+- Sprint: hold a key to run faster, with the movement, animation and effects tuned to look natural. The key can be
+  changed in the key settings; it can be turned on or off in the settings, and is off by default.
+
+**Content**
+
+- M.O.M.O.: new content that is mainly data, using slots the original game already reserves (step 3 of the Switch 2
+  Edition plan at the top of this page)
+- Action-based Mercenary missions: they need new game code and are still being evaluated (step 4 of the same plan)
+
 #### Planned: long-term ideas
 
 Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional
@@ -411,6 +422,15 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
+
+**操作**
+
+- 冲刺：按住按键跑得更快，移动、动作和演出都会调整得自然。按键可以在按键设置里更改；可以在设置里开关，默认关闭。
+
+**内容**
+
+- M.O.M.O.：以数据为主的新内容，使用原版已经预留的位置（本页开头 Switch 2 Edition 计划的第 3 步）
+- 佣兵团行动：需要新游戏程序，还在评估（同一计划的第 4 步）
 
 #### 目标：长期构想
 
