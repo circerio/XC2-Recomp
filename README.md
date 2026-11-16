@@ -81,6 +81,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 接近完成 |  |
 | 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 接近完成（DLSS 2 至 6 倍已实机确认；FSR 帧生成尚未） |  |
 | 13 | 改设置不用重开 | 在游戏的设置里改画面、超分辨率、帧生成等设置，马上生效，不用重开游戏 | 开发中 |  |
+| 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 
 ## Giving back
 
@@ -103,6 +104,7 @@ Below are the project's signature features and their current status. When each o
 | 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | Nearly done |  |
 | 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Nearly done (DLSS 2x to 6x confirmed in hands-on play; FSR Frame Generation not yet) |  |
 | 13 | Settings without a restart | Graphics, super resolution, frame generation and other settings take effect at once, with no restart | In development |  |
+| 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 
 [开发日志／Development log](DEVLOG.md)
 

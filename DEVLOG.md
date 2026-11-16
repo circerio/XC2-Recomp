@@ -4,6 +4,56 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-16
+
+### 简体中文
+
+这一篇也包括 2026-11-15 那次更新之后、当天合并的项目。
+
+#### 已解决的问题
+
+- 场景分辨率高于游戏原本的分辨率时，游戏原本的 TAA 会让画面变糊，而不是让边缘平滑：现在游戏 TAA 的抖动换算成内部分辨率的单位。超分辨率自己的抖动、SMAA 和关闭抗锯齿都不受影响；在游戏原本的分辨率下没有变化。自动回归和 4K 检查都通过，已合并，等待实机验证。做法写在[内部分辨率较高时的 TAA 指南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter)。
+  - 游戏自己的动态分辨率：强制它降低分辨率时，每一级的抖动都在正确范围内；但只在语言画面上逐格确认过，3D 场景里还没有。
+
+#### 实机试玩已确认
+
+- 这次新加入、实机试玩已确认的：
+  - **超分辨率的种类、DLSS 帧生成的开关和 Reflex 都不用重开游戏**：在超分辨率的种类之间切换（例如 DLSS 和 FSR）、打开或关闭 DLSS 帧生成、开关 Reflex，都马上生效。2026-11-14 记的是：打开或关闭帧生成本身仍要重新启动游戏；Reflex 在启动时没载入的话，要重新启动游戏后才生效。现在 DLSS 帧生成的开关和 Reflex 都不用重新启动了；FSR 帧生成的开关仍要重新启动游戏。在程序相同的测试版上实机试玩确认：帧生成是亲眼看到的，另外两项由那次试玩的记录确认。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **帧生成和帧率上限**：上限现在按显示的帧计算，帧生成的帧也算在内。帧生成那一行会在上限下方说明每秒渲染几帧、显示几帧；渲染低于每秒 60 帧时提醒输入延迟会增加，上限设为 30 时说明帧生成会暂停。
+- **声音输出**：新的声音输出设置，可选自动（跟随 Windows 的喇叭设置，默认）、立体声、5.1 或 7.1，改了马上生效，不用重开游戏。游戏原本只输出前方左右两个声道；另有一个环绕定位的选项（默认关闭，选「自动」也不会打开它），用来按声音的方向把它分配到周围的喇叭。设备没有所选的喇叭时，那一行会说明。
+
+#### 已公开的指南更新
+
+- [内部分辨率较高时的 TAA](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter)：把游戏自己 TAA 的抖动换算成内部分辨率的单位，超分辨率自己的抖动不动，以及用同一个版本做基准，检查静止的边缘、闪烁和拖影。
+- [内部与输出分辨率指南第 1 节](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution#1-the-short-version)：加了第 8 条，指向这份新指南。
+
+### English
+
+This entry also covers items merged on 2026-11-15, after that day's update.
+
+#### Fixed
+
+- With the scene above the game's original resolution, the game's original TAA blurred the picture instead of smoothing edges: the game's TAA jitter is now scaled to the internal resolution. Super resolution's own jitter, SMAA and anti-aliasing off are untouched, and nothing changes at the game's original resolution. The automatic regression and a 4K check passed; merged, awaiting hands-on testing. How it works is in the [TAA jitter at a higher internal resolution guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter).
+  - The game's own dynamic resolution: when we forced it to lower its resolution, the jitter stayed in range at every step, but we traced that only on the language screen, not yet in a 3D scene.
+
+#### Confirmed in hands-on play
+
+- New this time, and confirmed in hands-on play:
+  - **Super resolution type, DLSS frame generation on or off, and Reflex without a restart**: switching between super resolution types (for example DLSS and FSR), turning DLSS frame generation on or off, and turning Reflex on or off all take effect at once. On 2026-11-14 we noted that turning frame generation itself on or off still needed a restart, and that Reflex, if it was not loaded at start, took effect only after a restart. Now neither DLSS frame generation on or off nor Reflex needs a restart; turning FSR Frame Generation on or off still does. Checked in a hands-on play on a test build with the same code: frame generation by eye, the other two from that play's log.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Frame generation and the frame rate cap**: the cap now counts the frames shown, generated frames included. Under the cap, the frame generation row says how many frames per second are rendered and how many are shown; below 60 rendered frames per second it notes the added input lag, and at a 30 cap it says frame generation pauses.
+- **Sound output**: a new sound output setting: automatic (following the Windows speaker setup, the default), stereo, 5.1 or 7.1, taking effect at once with no restart. The game itself only outputs front left and right; a separate surround placement option, off by default and not turned on by automatic, is meant to spread the sound around the speakers by direction. If the device does not have the speakers chosen, the row says so.
+
+#### Guide updates
+
+- [TAA jitter at a higher internal resolution](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter): the game's own TAA jitter scaled to the internal resolution, super resolution's own jitter left alone, and checking still edges, flicker and trails against a baseline from the same build.
+- [Internal and output resolution guide, section 1](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution#1-the-short-version): a new rule 8 that points to the new guide.
+
 ## 2026-11-15
 
 ### 简体中文
