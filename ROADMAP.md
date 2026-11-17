@@ -49,6 +49,7 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 - M.O.M.O.: new content that is mainly data, using slots the original game already reserves (step 3 of the Switch 2
   Edition plan below)
 - Action-based Mercenary missions: they need new game code and are still being evaluated (step 4 of the same plan)
+- Subtitles for the party's post-battle banter
 
 ### Research goal: the final form
 
@@ -167,6 +168,7 @@ original implementations.
 - 冲刺：按住按键跑得更快，移动、动作和演出都会调整得自然。按键可以在按键设置里更改；可以在设置里开关，默认关闭。
 - M.O.M.O.：以数据为主的新内容，使用原版已经预留的位置（下方 Switch 2 Edition 计划的第 3 步）
 - 佣兵团行动：需要新游戏程序，还在评估（同一计划的第 4 步）
+- 战斗后队友对话的字幕
 
 ### 研究目标：最终形态
 

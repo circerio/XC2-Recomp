@@ -263,6 +263,7 @@ features and adds the final form this research aims for, and long-term ideas.
 - M.O.M.O.: new content that is mainly data, using slots the original game already reserves (step 3 of the Switch 2
   Edition plan at the top of this page)
 - Action-based Mercenary missions: they need new game code and are still being evaluated (step 4 of the same plan)
+- Subtitles for the party's post-battle banter
 
 #### Planned: long-term ideas
 
@@ -433,6 +434,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - M.O.M.O.：以数据为主的新内容，使用原版已经预留的位置（本页开头 Switch 2 Edition 计划的第 3 步）
 - 佣兵团行动：需要新游戏程序，还在评估（同一计划的第 4 步）
+- 战斗后队友对话的字幕
 
 #### 目标：长期构想
 
