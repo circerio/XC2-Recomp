@@ -4,6 +4,42 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-19
+
+### 简体中文
+
+这一篇包括 2026-11-16 那次更新之后合并的项目。
+
+#### 实机试玩已确认
+
+- 这次新加入、实机试玩已确认的：
+  - **FSR 帧生成不用重开游戏**：在设置里打开或关闭 FSR 帧生成，马上生效。2026-11-16 记的是 FSR 帧生成的开关仍要重新启动游戏；现在不用了。实机试玩时交替使用 DLSS 和 FSR，自由移动时帧生成确实在运作。
+  - **帧率上限太低时的说明**：帧率上限低于帧生成需要的帧率时，帧率上限那一行会说明。实机试玩确认：上限设为 30 时会出现这段说明。
+  - **旅店休息后的升级画面可以用鼠标操作**：用鼠标选择角色和数值、右键返回、确认。
+  - **Advanced New Game 的说明页可以用鼠标翻页**：左键下一页、右键返回。
+- 帧生成和可变刷新率一起开启时，显示器的刷新确实跟着画面走，没有撕裂线。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **设置里用左摇杆调整数值**：左摇杆可以改设置里的数值；声音输出和环绕定位两行移到游戏原本的声音分页。
+
+### English
+
+This entry covers items merged after the 2026-11-16 update.
+
+#### Confirmed in hands-on play
+
+- New this time, and confirmed in hands-on play:
+  - **FSR Frame Generation without a restart**: turning FSR Frame Generation on or off in the settings takes effect at once. On 2026-11-16 we noted that turning FSR Frame Generation on or off still needed a restart; it no longer does. In hands-on play, switching between DLSS and FSR, frame generation was really working while moving freely.
+  - **A note when the frame rate cap is too low**: when the frame rate cap is below what frame generation needs, the frame rate cap row says so. Confirmed in hands-on play: at a 30 cap the note appears.
+  - **Mouse on the level-up screen after resting at an inn**: pick characters and values with the mouse, right-click to go back, and confirm.
+  - **Mouse on the New Game Plus explanation pages**: left-click for the next page and right-click to go back.
+- With frame generation and variable refresh rate both on, the display's refresh really follows the frames, with no tear line.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Left stick in the settings**: the left stick changes values in the settings, and the sound output and surround placement rows moved to the game's own sound page.
+
 ## 2026-11-16
 
 ### 简体中文

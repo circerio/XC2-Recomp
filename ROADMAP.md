@@ -34,7 +34,7 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 ### Nearly done
 
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game or for cutscenes only (DLSS 2x
-  to 6x confirmed in hands-on play; FSR Frame Generation not yet)
+  to 6x and FSR Frame Generation confirmed in hands-on play)
 - NVIDIA Reflex
 - Direct mouse control of menus
 
@@ -46,9 +46,8 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 - Automatic tuning to your RAM, GPU and CPU cores
 - Sprint: hold a key to run faster, with the movement, animation and effects tuned to look natural. The key can be
   changed in the key settings; it can be turned on or off in the settings, and is off by default.
-- M.O.M.O.: new content that is mainly data, using slots the original game already reserves (step 3 of the Switch 2
-  Edition plan below)
-- Action-based Mercenary missions: they need new game code and are still being evaluated (step 4 of the same plan)
+- M.O.M.O. (Nintendo Switch 2 Edition content)
+- Action-based Mercenary missions (Nintendo Switch 2 Edition content)
 - Subtitles for the party's post-battle banter
 
 ### Research goal: the final form
@@ -106,24 +105,16 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 - Ray-traced shadows
 
-#### Toward the Nintendo Switch 2 Edition (experimental)
+#### A version faithful to the Nintendo Switch 2 Edition
 
-Bringing the Nintendo Switch 2 Edition's improvements into this version, on top of the original Switch version. Its 3D
-textures are at the same resolution as the original's, and from our comparison its models do not appear to be more
-detailed either, so the improvements to bring in are not in the 3D graphics. The plan, in order:
+We plan a version that stays as faithful as possible to the Nintendo Switch 2 Edition, in its content and its game
+rules, plus what a PC version needs (resolution, keyboard and mouse, DLSS/FSR and so on). Once it is complete, the full
+source code of this version will be published. It will not include any game data, keys or decryption tools, and no
+playable builds will be distributed: you will need your own legally obtained copy of the game. The approach is still
+being evaluated, and there is no timeline before it is complete.
 
-1. UI art and fonts at twice the resolution, used only where they look better and fit with the icons we drew ourselves
-2. The pre-rendered videos replaced with 4K versions, kept in sync with the game
-3. New content that is mainly data, such as M.O.M.O., using slots the original game already reserves
-4. Content that needs new game code, such as action-based Mercenary missions: still being evaluated
-
-Every step that works out will become part of "Xenoblade Chronicles 2: REFORGED Edition", the final form of this
-research.
-
-There is no promise of a source release; the techniques behind it will be shared later in lawful ways. This repository
-will not provide any Switch 2 Edition files, assets, keys or extraction tools, and will not show its screenshots or
-official promotional art. This section replaces the earlier plan of using no Switch 2 Edition assets and building only
-original implementations.
+This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, will not explain how to
+extract this data, and will not show its screenshots or official promotional art.
 
 ---
 
@@ -155,7 +146,7 @@ original implementations.
 
 ### 接近完成
 
-- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍已实机确认；FSR 帧生成尚未）
+- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍和 FSR 帧生成已实机确认）
 - NVIDIA Reflex
 - 鼠标直接操作菜单
 
@@ -166,8 +157,8 @@ original implementations.
 - 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
 - 冲刺：按住按键跑得更快，移动、动作和演出都会调整得自然。按键可以在按键设置里更改；可以在设置里开关，默认关闭。
-- M.O.M.O.：以数据为主的新内容，使用原版已经预留的位置（下方 Switch 2 Edition 计划的第 3 步）
-- 佣兵团行动：需要新游戏程序，还在评估（同一计划的第 4 步）
+- M.O.M.O.（Nintendo Switch 2 Edition 的内容）
+- 佣兵团行动（Nintendo Switch 2 Edition 的内容）
 - 战斗后队友对话的字幕
 
 ### 研究目标：最终形态
@@ -222,15 +213,8 @@ original implementations.
 
 - 光线追踪阴影
 
-#### 向 Nintendo Switch 2 Edition 看齐（实验中）
+#### 忠于 Nintendo Switch 2 Edition 的版本
 
-把 Nintendo Switch 2 Edition 的改进吸收进这个版本，在原本 Switch 版的基础上进行。它的 3D 贴图和原版是相同的分辨率；从我们的比对看，模型也没有变得更精细，所以要吸收的改进不在 3D 画面上。计划依序是：
+我们会做一个尽量忠于 Nintendo Switch 2 Edition 的版本：内容和游戏规则都对齐 2E，再加上 PC 版必需的功能（分辨率、键鼠、DLSS／FSR 等）。全部完成后会公开这个版本的完整源码；不包含任何游戏数据、密钥或解密工具，也不发布可游玩的构建，需要使用你自己合法取得的游戏。具体做法还在评估，完成前不提供时间表。
 
-1. 两倍分辨率的界面美术和字体，前提是看起来更好，并且和我们自己绘制的图标协调
-2. 预渲染的影片换成 4K 版本，并和游戏保持同步
-3. 以数据为主的新内容，例如 M.O.M.O.，使用原版已经预留的位置
-4. 需要新游戏程序的内容，例如佣兵团行动，还在评估
-
-做成的每一步，都会成为这项研究的最终形态《异度神剑 2：REFORGED Edition》的一部分。
-
-不承诺开源，相关技术之后会以合法的方式公开。本仓库不提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不放它的截图或官方宣传图。这一节取代之前「不使用任何 Switch 2 版素材、只做原创实现」的计划。
+本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不说明如何取出这些数据，也不会放它的截图或官方宣传图。

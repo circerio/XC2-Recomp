@@ -14,35 +14,17 @@
 > **初期演示：接近完成。** 这只是展示用，不提供下载，也不是可游玩的发布。它的框架在立项初期就定下了，所以这里列出的许多功能并没有放进去。
 
 > [!IMPORTANT]
-> **Experimental: toward the Nintendo Switch 2 Edition**
+> **Planned: a version faithful to the Nintendo Switch 2 Edition**
 >
-> We have started an experiment to bring what the Nintendo Switch 2 Edition improves into this PC version. It builds on the original Switch version; it is not a separate port of the Switch 2 Edition.
+> We plan a version that stays as faithful as possible to the Nintendo Switch 2 Edition, in its content and its game rules, plus what a PC version needs (resolution, keyboard and mouse, DLSS/FSR and so on). Once it is complete, the full source code of this version will be published. It will not include any game data, keys or decryption tools, and no playable builds will be distributed: you will need your own legally obtained copy of the game. The approach is still being evaluated, and there is no timeline before it is complete.
 >
-> What we know so far: its 3D textures are at the same resolution as the original's, and from our comparison its models do not appear to be more detailed either, so the improvements to bring in are not in the 3D graphics. The plan, in order:
+> This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, will not explain how to extract this data, and will not show its screenshots or official promotional art.
 >
-> 1. UI art and fonts at twice the resolution, used only where they look better and fit with the icons we drew ourselves.
-> 2. The pre-rendered videos replaced with 4K versions, kept in sync with the game.
-> 3. New content that is mainly data, such as M.O.M.O., using slots the original game already reserves.
-> 4. Content that needs new game code, such as action-based Mercenary missions: still being evaluated.
+> **计划中：忠于 Nintendo Switch 2 Edition 的版本**
 >
-> It is research for now. Every step that works out will become part of "Xenoblade Chronicles 2: REFORGED Edition", the final form of this research.
+> 我们会做一个尽量忠于 Nintendo Switch 2 Edition 的版本：内容和游戏规则都对齐 2E，再加上 PC 版必需的功能（分辨率、键鼠、DLSS／FSR 等）。全部完成后会公开这个版本的完整源码；不包含任何游戏数据、密钥或解密工具，也不发布可游玩的构建，需要使用你自己合法取得的游戏。具体做法还在评估，完成前不提供时间表。
 >
-> There is no promise of a source release, and this repository does not explain how to use it to play the game. The techniques behind it will be shared later in lawful ways, such as the implementation guides listed below. This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, and will not show its screenshots or official promotional art.
->
-> **实验中：向 Nintendo Switch 2 Edition 看齐**
->
-> 我们开始了一项实验：把 Nintendo Switch 2 Edition 带来的改进吸收进这个 PC 版本。做法是在原本 Switch 版的基础上升级，而不是另做一个 Switch 2 Edition 的移植。
->
-> 目前已知：它的 3D 贴图和原版是相同的分辨率；从我们的比对看，模型也没有变得更精细，所以要吸收的改进不在 3D 画面上。计划依序是：
->
-> 1. 两倍分辨率的界面美术和字体，前提是看起来更好，并且和我们自己绘制的图标协调。
-> 2. 预渲染的影片换成 4K 版本，并和游戏保持同步。
-> 3. 以数据为主的新内容，例如 M.O.M.O.，使用原版已经预留的位置。
-> 4. 需要新游戏程序的内容，例如佣兵团行动，还在评估。
->
-> 目前还在研究阶段。做成的每一步，都会成为这项研究的最终形态《异度神剑 2：REFORGED Edition》的一部分。
->
-> 不承诺开源，本仓库也不会说明如何用它来游玩。相关技术之后会以合法的方式公开，例如下方列出的实现指南。本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不会放它的截图或官方宣传图。
+> 本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不说明如何取出这些数据，也不会放它的截图或官方宣传图。
 
 ## 关于这个项目
 
@@ -79,7 +61,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动 | 接近完成 |  |
 | 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 接近完成 |  |
-| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 接近完成（DLSS 2 至 6 倍已实机确认；FSR 帧生成尚未） |  |
+| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 接近完成（DLSS 2 至 6 倍和 FSR 帧生成已实机确认） |  |
 | 13 | 改设置不用重开 | 在游戏的设置里改画面、超分辨率、帧生成等设置，马上生效，不用重开游戏 | 开发中 |  |
 | 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 
@@ -102,7 +84,7 @@ Below are the project's signature features and their current status. When each o
 | 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus | Nearly done |  |
 | 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | Nearly done |  |
-| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Nearly done (DLSS 2x to 6x confirmed in hands-on play; FSR Frame Generation not yet) |  |
+| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Nearly done (DLSS 2x to 6x and FSR Frame Generation confirmed in hands-on play) |  |
 | 13 | Settings without a restart | Graphics, super resolution, frame generation and other settings take effect at once, with no restart | In development |  |
 | 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 
@@ -231,7 +213,7 @@ features and adds the final form this research aims for, and long-term ideas.
 **Graphics**
 
 - Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game
-  or to cutscenes only (DLSS 2x to 6x confirmed in hands-on play; FSR Frame Generation not yet)
+  or to cutscenes only (DLSS 2x to 6x and FSR Frame Generation confirmed in hands-on play)
 
 **Performance**
 
@@ -260,16 +242,15 @@ features and adds the final form this research aims for, and long-term ideas.
 
 **Content**
 
-- M.O.M.O.: new content that is mainly data, using slots the original game already reserves (step 3 of the Switch 2
-  Edition plan at the top of this page)
-- Action-based Mercenary missions: they need new game code and are still being evaluated (step 4 of the same plan)
+- M.O.M.O. (Nintendo Switch 2 Edition content)
+- Action-based Mercenary missions (Nintendo Switch 2 Edition content)
 - Subtitles for the party's post-battle banter
 
 #### Planned: long-term ideas
 
 Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional
-gameplay mods, system mods, ray-traced shadows (research) and an experiment to bring the Nintendo Switch 2 Edition's
-improvements into this version (see the top of this page). Every mod that changes gameplay or balance will be optional;
+gameplay mods, system mods, ray-traced shadows (research) and a version faithful to the Nintendo Switch 2 Edition
+(see the top of this page). Every mod that changes gameplay or balance will be optional;
 by default the game plays as the original.
 
 ### Distribution
@@ -404,7 +385,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 **画面**
 
-- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍已实机确认；FSR 帧生成尚未）
+- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍和 FSR 帧生成已实机确认）
 
 **性能**
 
@@ -432,14 +413,14 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 **内容**
 
-- M.O.M.O.：以数据为主的新内容，使用原版已经预留的位置（本页开头 Switch 2 Edition 计划的第 3 步）
-- 佣兵团行动：需要新游戏程序，还在评估（同一计划的第 4 步）
+- M.O.M.O.（Nintendo Switch 2 Edition 的内容）
+- 佣兵团行动（Nintendo Switch 2 Edition 的内容）
 - 战斗后队友对话的字幕
 
 #### 目标：长期构想
 
 除上述功能外，[路线图](ROADMAP.md)还列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
-光线追踪阴影（研究方向），以及把 Nintendo Switch 2 Edition 的改进吸收进这个版本的实验（见本页开头）。所有会改变玩法或平衡的 Mod
+光线追踪阴影（研究方向），以及忠于 Nintendo Switch 2 Edition 的版本（见本页开头）。所有会改变玩法或平衡的 Mod
 都是可选的，默认保持原版体验。
 
 ### 发布说明
