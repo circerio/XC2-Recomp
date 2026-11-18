@@ -27,6 +27,10 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 - Keyboard and mouse: mouse camera, number keys for Arts, full key rebinding
 - Automatic switching between controller and keyboard and mouse
 - Button prompts for Xbox, PlayStation and Nintendo controller layouts
+- Surround output and positioning: 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned
+  sounds spread around the speakers by direction, with the positioning off by default (an interim approach for the demo,
+  to be replaced later by one faithful to the Nintendo Switch 2 Edition). Not tested on physical 5.1/7.1 speakers. Works
+  on headphones with virtual surround (Dolby Atmos for Headphones); the actual effect depends on your device.
 - RomFS mods in the Ryujinx / yuzu folder layout, loaded without changing the original files
 - Save protection: automatic backups and recovery from damaged saves
 - Logs and automatic crash reports
@@ -140,6 +144,7 @@ extract this data, and will not show its screenshots or official promotional art
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键自由改键
 - 在手柄与键盘鼠标之间自动切换
 - 按键图标（Xbox、PlayStation、任天堂配置）
+- 环绕输出与定位：跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭，定位默认关闭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法）。未用实体 5.1／7.1 音箱测试；耳机（Dolby Atmos for Headphones 虚拟环绕）上确认有效；实际效果因设备而异。
 - 支持 Ryujinx／yuzu 文件夹格式的 RomFS mod，加载时不修改原始文件
 - 存档保护：自动备份，存档损坏时可以恢复
 - 日志与自动崩溃报告

@@ -64,6 +64,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 接近完成（DLSS 2 至 6 倍和 FSR 帧生成已实机确认） |  |
 | 13 | 改设置不用重开 | 在游戏的设置里改画面、超分辨率、帧生成等设置，马上生效，不用重开游戏 | 开发中 |  |
 | 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
+| 15 | 环绕输出与定位 | 跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
 
 ## Giving back
 
@@ -87,6 +88,7 @@ Below are the project's signature features and their current status. When each o
 | 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Nearly done (DLSS 2x to 6x and FSR Frame Generation confirmed in hands-on play) |  |
 | 13 | Settings without a restart | Graphics, super resolution, frame generation and other settings take effect at once, with no restart | In development |  |
 | 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
+| 15 | Surround output and positioning | 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned sounds spread around the speakers by direction (an interim approach for the demo, to be replaced later by one faithful to the Nintendo Switch 2 Edition) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
 
 [开发日志／Development log](DEVLOG.md)
 
@@ -195,6 +197,13 @@ features and adds the final form this research aims for, and long-term ideas.
 - Keyboard and mouse: mouse camera control, number keys for Arts, and fully rebindable keys
 - Automatic switching between controller and keyboard and mouse
 - Button prompts for Xbox, PlayStation and Nintendo controller layouts
+
+**Sound**
+
+- Surround output and positioning: 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned
+  sounds spread around the speakers by direction, with the positioning off by default (an interim approach for the demo,
+  to be replaced later by one faithful to the Nintendo Switch 2 Edition). Not tested on physical 5.1/7.1 speakers. Works
+  on headphones with virtual surround (Dolby Atmos for Headphones); the actual effect depends on your device.
 
 **Mods**
 
@@ -368,6 +377,10 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 - 键盘鼠标：鼠标控制镜头、数字键释放战技、所有按键都可以自由改键
 - 在手柄与键盘鼠标之间自动切换
 - 按键图标（Xbox、PlayStation、任天堂配置）
+
+**声音**
+
+- 环绕输出与定位：跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭，定位默认关闭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法）。未用实体 5.1／7.1 音箱测试；耳机（Dolby Atmos for Headphones 虚拟环绕）上确认有效；实际效果因设备而异。
 
 **Mod**
 
