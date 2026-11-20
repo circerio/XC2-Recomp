@@ -41,18 +41,25 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
   to 6x and FSR Frame Generation confirmed in hands-on play)
 - NVIDIA Reflex
 - Direct mouse control of menus
+- Subtitles for the party's post-battle banter
 
 ### Planned
 
 - More texture quality levels (High, Max)
 - Model detail (LOD) levels
+- Screen effects with a fixed size (ambient occlusion, indirect light, bloom, translucent layers) scaled with the
+  internal resolution, so they are no longer blurry or jagged at high resolutions; nothing changes at the game's
+  original resolution
+- Graphics quality options: a Graphics quality preset row (Original, High, Max), with its own row below for each of
+  shadow quality, effect quality, draw distance and foliage density; better ambient occlusion, soft shadows and
+  screen-space reflections to be added later
 - Less stutter on first visits to new places
 - Automatic tuning to your RAM, GPU and CPU cores
 - Sprint: hold a key to run faster, with the movement, animation and effects tuned to look natural. The key can be
   changed in the key settings; it can be turned on or off in the settings, and is off by default.
 - M.O.M.O. (Nintendo Switch 2 Edition content)
 - Action-based Mercenary missions (Nintendo Switch 2 Edition content)
-- Subtitles for the party's post-battle banter
+- Full subtitles for the whole game: field and situational conversations, and menu voice lines (in development)
 
 ### Research goal: the final form
 
@@ -117,6 +124,10 @@ source code of this version will be published. It will not include any game data
 playable builds will be distributed: you will need your own legally obtained copy of the game. The approach is still
 being evaluated, and there is no timeline before it is complete.
 
+- HDR as an option
+- Surround sound: the current approach to be replaced by the Nintendo Switch 2 Edition's own sound positioning; until
+  then, the surround output and positioning item stays marked as an interim approach
+
 This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, will not explain how to
 extract this data, and will not show its screenshots or official promotional art.
 
@@ -154,17 +165,20 @@ extract this data, and will not show its screenshots or official promotional art
 - NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏，或只在过场动画中（DLSS 2 至 6 倍和 FSR 帧生成已实机确认）
 - NVIDIA Reflex
 - 鼠标直接操作菜单
+- 战斗后队友对话的字幕
 
 ### 目标
 
 - 更多材质质量档位（高、最高）
 - 模型细节（LOD）档位
+- 固定尺寸的画面效果（环境光遮蔽、间接光、光晕、半透明层）跟着内部分辨率放大，高分辨率下不再模糊、不再有锯齿；在游戏原本的分辨率下画面不变
+- 画质选项：一行「画面质量」预设（原版、高、最高），下面阴影质量、效果质量、描绘距离、植被密度各自一行；之后再加入更好的环境光遮蔽、柔和阴影和屏幕空间反射
 - 减少首次进入新场景时的卡顿
 - 根据内存、GPU 与 CPU 核心数自动调整
 - 冲刺：按住按键跑得更快，移动、动作和演出都会调整得自然。按键可以在按键设置里更改；可以在设置里开关，默认关闭。
 - M.O.M.O.（Nintendo Switch 2 Edition 的内容）
 - 佣兵团行动（Nintendo Switch 2 Edition 的内容）
-- 战斗后队友对话的字幕
+- 整个游戏的全字幕：野外和情境对话、菜单语音（开发中）
 
 ### 研究目标：最终形态
 
@@ -221,5 +235,8 @@ extract this data, and will not show its screenshots or official promotional art
 #### 忠于 Nintendo Switch 2 Edition 的版本
 
 我们会做一个尽量忠于 Nintendo Switch 2 Edition 的版本：内容和游戏规则都对齐 2E，再加上 PC 版必需的功能（分辨率、键鼠、DLSS／FSR 等）。全部完成后会公开这个版本的完整源码；不包含任何游戏数据、密钥或解密工具，也不发布可游玩的构建，需要使用你自己合法取得的游戏。具体做法还在评估，完成前不提供时间表。
+
+- HDR 作为选项提供
+- 环绕声：用 Nintendo Switch 2 Edition 自己的声音定位取代现在的做法；在那之前，环绕输出与定位仍标明是过渡做法
 
 本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不说明如何取出这些数据，也不会放它的截图或官方宣传图。

@@ -65,6 +65,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 13 | 改设置不用重开 | 在游戏的设置里改画面、超分辨率、帧生成等设置，马上生效，不用重开游戏 | 开发中 |  |
 | 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | 环绕输出与定位 | 跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
+| 16 | 战斗后队友对话的字幕 | 战斗后队友的对话也有字幕 | 接近完成 |  |
 
 ## Giving back
 
@@ -89,6 +90,7 @@ Below are the project's signature features and their current status. When each o
 | 13 | Settings without a restart | Graphics, super resolution, frame generation and other settings take effect at once, with no restart | In development |  |
 | 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | Surround output and positioning | 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned sounds spread around the speakers by direction (an interim approach for the demo, to be replaced later by one faithful to the Nintendo Switch 2 Edition) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
+| 16 | Subtitles for the party's post-battle banter | The party's post-battle conversations have subtitles too | Nearly done |  |
 
 [开发日志／Development log](DEVLOG.md)
 
@@ -232,12 +234,22 @@ features and adds the final form this research aims for, and long-term ideas.
 
 - Direct mouse control of menus
 
+**Content**
+
+- Subtitles for the party's post-battle banter
+
 #### Planned
 
 **Graphics**
 
 - More texture quality levels (High, Max)
 - Model detail (LOD) levels
+- Screen effects with a fixed size (ambient occlusion, indirect light, bloom, translucent layers) scaled with the
+  internal resolution, so they are no longer blurry or jagged at high resolutions; nothing changes at the game's
+  original resolution
+- Graphics quality options: a Graphics quality preset row (Original, High, Max), with its own row below for each of
+  shadow quality, effect quality, draw distance and foliage density; better ambient occlusion, soft shadows and
+  screen-space reflections to be added later
 
 **Performance**
 
@@ -253,7 +265,13 @@ features and adds the final form this research aims for, and long-term ideas.
 
 - M.O.M.O. (Nintendo Switch 2 Edition content)
 - Action-based Mercenary missions (Nintendo Switch 2 Edition content)
-- Subtitles for the party's post-battle banter
+- Full subtitles for the whole game: field and situational conversations, and menu voice lines (in development)
+
+**A version faithful to the Nintendo Switch 2 Edition**
+
+- HDR as an option
+- Surround sound: the current approach to be replaced by the Nintendo Switch 2 Edition's own sound positioning; until
+  then, the surround output and positioning item stays marked as an interim approach
 
 #### Planned: long-term ideas
 
@@ -408,12 +426,18 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - 鼠标直接操作菜单
 
+**内容**
+
+- 战斗后队友对话的字幕
+
 #### 目标
 
 **画面**
 
 - 更多材质质量档位（高、最高）
 - 模型细节（LOD）档位
+- 固定尺寸的画面效果（环境光遮蔽、间接光、光晕、半透明层）跟着内部分辨率放大，高分辨率下不再模糊、不再有锯齿；在游戏原本的分辨率下画面不变
+- 画质选项：一行「画面质量」预设（原版、高、最高），下面阴影质量、效果质量、描绘距离、植被密度各自一行；之后再加入更好的环境光遮蔽、柔和阴影和屏幕空间反射
 
 **性能**
 
@@ -428,7 +452,12 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 - M.O.M.O.（Nintendo Switch 2 Edition 的内容）
 - 佣兵团行动（Nintendo Switch 2 Edition 的内容）
-- 战斗后队友对话的字幕
+- 整个游戏的全字幕：野外和情境对话、菜单语音（开发中）
+
+**忠于 Nintendo Switch 2 Edition 的版本**
+
+- HDR 作为选项提供
+- 环绕声：用 Nintendo Switch 2 Edition 自己的声音定位取代现在的做法；在那之前，环绕输出与定位仍标明是过渡做法
 
 #### 目标：长期构想
 
