@@ -59,6 +59,8 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
   changed in the key settings; it can be turned on or off in the settings, and is off by default.
 - M.O.M.O. (Nintendo Switch 2 Edition content)
 - Action-based Mercenary missions (Nintendo Switch 2 Edition content)
+- Surround sound: the current approach to be replaced by the Nintendo Switch 2 Edition's own sound positioning; until
+  then, the surround output and positioning item stays marked as an interim approach
 - Full subtitles for the whole game: field and situational conversations, and menu voice lines (in development)
 
 ### Research goal: the final form
@@ -116,17 +118,13 @@ Fewer repetitive steps and menu trips. Representative directions:
 
 - Ray-traced shadows
 
-#### A version faithful to the Nintendo Switch 2 Edition
+#### How to integrate the Nintendo Switch 2 Edition's additions
 
-We plan a version that stays as faithful as possible to the Nintendo Switch 2 Edition, in its content and its game
-rules, plus what a PC version needs (resolution, keyboard and mouse, DLSS/FSR and so on). Once it is complete, the full
-source code of this version will be published. It will not include any game data, keys or decryption tools, and no
-playable builds will be distributed: you will need your own legally obtained copy of the game. The approach is still
-being evaluated, and there is no timeline before it is complete.
-
-- HDR as an option
-- Surround sound: the current approach to be replaced by the Nintendo Switch 2 Edition's own sound positioning; until
-  then, the surround output and positioning item stays marked as an interim approach
+We will not release a separate version faithful to the Nintendo Switch 2 Edition. Instead, we will publish how to
+integrate what the Nintendo Switch 2 Edition adds into a recompilation of the original Switch version, so that other
+recompilation projects can use it too. The method will be published in parts, each part once it has been verified. It
+will not include any game data, keys or decryption tools, and no playable builds will be distributed: you will need your
+own legally obtained copy of the game. There is no timeline before it is complete.
 
 This repository will not provide any Switch 2 Edition files, assets, keys or extraction tools, will not explain how to
 extract this data, and will not show its screenshots or official promotional art.
@@ -178,6 +176,7 @@ extract this data, and will not show its screenshots or official promotional art
 - 冲刺：按住按键跑得更快，移动、动作和演出都会调整得自然。按键可以在按键设置里更改；可以在设置里开关，默认关闭。
 - M.O.M.O.（Nintendo Switch 2 Edition 的内容）
 - 佣兵团行动（Nintendo Switch 2 Edition 的内容）
+- 环绕声：用 Nintendo Switch 2 Edition 自己的声音定位取代现在的做法；在那之前，环绕输出与定位仍标明是过渡做法
 - 整个游戏的全字幕：野外和情境对话、菜单语音（开发中）
 
 ### 研究目标：最终形态
@@ -232,11 +231,8 @@ extract this data, and will not show its screenshots or official promotional art
 
 - 光线追踪阴影
 
-#### 忠于 Nintendo Switch 2 Edition 的版本
+#### 整合 Nintendo Switch 2 Edition 新增内容的方法
 
-我们会做一个尽量忠于 Nintendo Switch 2 Edition 的版本：内容和游戏规则都对齐 2E，再加上 PC 版必需的功能（分辨率、键鼠、DLSS／FSR 等）。全部完成后会公开这个版本的完整源码；不包含任何游戏数据、密钥或解密工具，也不发布可游玩的构建，需要使用你自己合法取得的游戏。具体做法还在评估，完成前不提供时间表。
-
-- HDR 作为选项提供
-- 环绕声：用 Nintendo Switch 2 Edition 自己的声音定位取代现在的做法；在那之前，环绕输出与定位仍标明是过渡做法
+我们不会另外发布忠于 Nintendo Switch 2 Edition 的版本，改为公开把 Nintendo Switch 2 Edition 新增的内容整合进原版 Switch 重编译的方法，让其他重编译项目也能使用。方法会分成几个部分，每一部分验证完成后发布；不包含任何游戏数据、密钥或解密工具，也不发布可游玩的构建，需要使用你自己合法取得的游戏。完成前不提供时间表。
 
 本仓库不会提供任何 Switch 2 Edition 的文件、素材、密钥或提取工具，也不说明如何取出这些数据，也不会放它的截图或官方宣传图。

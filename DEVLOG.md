@@ -4,6 +4,24 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-21
+
+### 简体中文
+
+#### 方向调整
+
+- 不另外发布忠于 Nintendo Switch 2 Edition 的版本。
+- 改为公开把 Nintendo Switch 2 Edition 新增的内容整合进原版 Switch 重编译的方法，让其他重编译项目也能使用。方法分成几个部分，每一部分验证完成后发布；完成前不提供时间表。
+
+### English
+
+#### Change of direction
+
+- We will not release a separate version faithful to the Nintendo Switch 2 Edition.
+- Instead, we will publish how to integrate what the Nintendo Switch 2 Edition adds into a recompilation of the original
+  Switch version, so that other recompilation projects can use it too. It will be published in parts, each part once it
+  has been verified; there is no timeline before it is complete.
+
 ## 2026-11-19
 
 ### 简体中文
