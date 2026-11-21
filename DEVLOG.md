@@ -4,6 +4,38 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-22
+
+### 简体中文
+
+这一篇也包括 2026-11-21 合并的项目。
+
+#### 已解决的问题
+
+- 高于 30 fps 时，界面上一直循环的动画（例如战斗中属性图标的光晕）会越变越大；现在不会了。战斗目前仍维持 30 fps，这项修正是为之后的高帧率准备的。已合并，等待实机验证。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **帧生成的第三种范围「过场以外」**：帧生成可以只用在过场以外，过场动画不补帧。
+- **游戏文字里的键盘按键图标**：键帽的形状、外框、大小和上下对齐，改成和游戏自己的按钮图标一致。
+
+### English
+
+This entry also covers items merged on 2026-11-21.
+
+#### Fixed
+
+- Above 30 fps, a looping animation in the interface (such as the glow of the element icons in battle) kept growing; it
+  no longer does. Battles still stay at 30 fps for now; this fix prepares for a higher frame rate there. Merged,
+  awaiting hands-on testing.
+
+#### New (merged, awaiting hands-on testing)
+
+- **A third frame generation scope, "everything except cutscenes"**: frame generation can be used everywhere except in
+  cutscenes, so cutscenes are not given generated frames.
+- **Keyboard key icons in the game's text**: the key caps now match the game's own button icons in shape, outline, size
+  and vertical alignment.
+
 ## 2026-11-21
 
 ### 简体中文
@@ -21,6 +53,63 @@ A daily record of what changed: problems fixed, features added, and what is stil
 - Instead, we will publish how to integrate what the Nintendo Switch 2 Edition adds into a recompilation of the original
   Switch version, so that other recompilation projects can use it too. It will be published in parts, each part once it
   has been verified; there is no timeline before it is complete.
+
+## 2026-11-20
+
+### 简体中文
+
+这一篇包括 2026-11-19 那次更新之后、到 2026-11-20 合并的项目。
+
+#### 初期演示
+
+- 初期演示在这一天录好，现已发布：[在 B 站观看](https://www.bilibili.com/video/BV1WSse6PE49/)。视频中的游戏本身是原版；标题画面使用 Nintendo Switch 2 Edition 的标题，横幅已模糊处理。
+
+#### 实机试玩已确认
+
+- **冲刺**：按住按键跑得更快，跑步动作也跟着调整，不会滑步。可以在设置里开关，默认关闭。功能已实机确认，手感还在调整。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **HDR 下的 FSR 帧生成**：开着 HDR 时也能使用 FSR 帧生成。
+- **帧生成无法启动时照常游玩**：帧生成启动失败时，游戏不使用帧生成继续运行并显示说明；在设置里再选一次会重新尝试。
+- **事件剧场的鼠标操作**：事件剧场的各层清单都能用鼠标点选，右键逐层返回。
+- **韩文**：游戏语言是韩文时，游戏会真正显示它自己的韩文文字和韩文字体（语音维持日文），不再退回日文；我们加的设置和说明也有韩文，没有缺字。
+
+#### 正在调查
+
+- **战斗后队友对话的字幕**：已合并，默认关闭。实机试玩发现字幕出现得太晚、字也太大，正在修正。
+
+### English
+
+This entry covers items merged after the 2026-11-19 update, up to 2026-11-20.
+
+#### Early demo
+
+- The early demo was recorded on this day and is now published: [watch it on Bilibili](https://www.bilibili.com/video/BV1WSse6PE49/).
+  The game in the video is the original; the title screen uses the Nintendo Switch 2 Edition's title, with its banner
+  blurred.
+
+#### Confirmed in hands-on play
+
+- **Sprint**: hold a key to run faster, with the running animation adjusted so the feet do not slide. It can be turned
+  on or off in the settings, and is off by default. The function is confirmed in hands-on play; the feel is still being
+  tuned.
+
+#### New (merged, awaiting hands-on testing)
+
+- **FSR Frame Generation with HDR**: FSR Frame Generation can be used with HDR on.
+- **Playing on when frame generation cannot start**: if frame generation fails to start, the game keeps running without
+  it and says so; choosing it again in the settings tries again.
+- **Mouse in the Event Theater**: every list in the Event Theater can be clicked with the mouse, and right-click goes
+  back one level at a time.
+- **Korean**: when the game language is Korean, the game really shows its Korean text with its own Korean font (voices
+  stay Japanese) instead of falling back to Japanese; the settings and help text we added are in Korean too, with no
+  missing characters.
+
+#### Under investigation
+
+- **Subtitles for the party's post-battle banter**: merged, off by default. Hands-on play found that the subtitles
+  appear too late and are too large; a fix is in progress.
 
 ## 2026-11-19
 
