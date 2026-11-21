@@ -57,7 +57,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 3 | HDR 输出 | HDR10 与 scRGB 输出，可调峰值亮度和纸白，并保留高光 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
 | 4 | 独占全屏 | 与无边框并存的真正独占模式，支持 Alt+Tab 和 F11 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | 任意帧率下的自动曝光 | 无论帧率多少，自动曝光的适应时间都与 30 fps 相同 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
-| 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同 | 开发中 |  |
+| 6 | 与帧率无关的游戏逻辑 | 计时器、菜单连发和等待在任何帧率下速度都相同；扫描整个游戏里写死 30 fps 的时间，逐项修正 | 开发中 |  |
 | 7 | 原版设定画面内的 PC 设定 | PC 选项就在游戏原本的设定画面里，没有启动器，也没有独立窗口 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/settings) |
 | 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字保持输出分辨率的清晰度 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
@@ -68,6 +68,9 @@ The source code is not public because this is, first of all, something I'm makin
 | 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | 环绕输出与定位 | 跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
 | 16 | 战斗后队友对话的字幕 | 战斗后队友的对话也有字幕 | 接近完成 |  |
+| 17 | 画面效果跟着内部分辨率放大 | 固定尺寸的画面效果（环境光遮蔽、间接光、光晕、半透明层）跟着内部分辨率放大，高分辨率下不再模糊、不再有锯齿；在游戏原本的分辨率下画面不变 | 计划中 |  |
+| 18 | 4K 下不必放大的字体 | 在 4K 下，游戏的文字不必放大，笔画清晰 | 计划中 |  |
+| 19 | 整合 Nintendo Switch 2 Edition 新增内容的方法 | 把 Nintendo Switch 2 Edition 新增的内容整合进原版 Switch 重编译的方法；各章分开发布在 XC2-Recomp-Contributions | 计划中 |  |
 
 ## Giving back
 
@@ -82,7 +85,7 @@ Below are the project's signature features and their current status. When each o
 | 3 | HDR output | HDR10 and scRGB output with peak brightness and paper white, and highlights kept | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/hdr) |
 | 4 | Exclusive fullscreen | A true exclusive mode next to borderless, with Alt+Tab and F11 handled | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/vrr) |
 | 5 | Auto exposure at any frame rate | Eye adaptation takes the same time as at 30 fps, at any frame rate | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/exposure) |
-| 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate | In development |  |
+| 6 | Frame-rate independent game logic | Timers, menu repeat and waits run at the same speed at any frame rate; the whole game is scanned for timings fixed at 30 fps, and each one is fixed | In development |  |
 | 7 | PC settings in the game's own menu | PC options inside the game's own Options screen, with no launcher and no separate window | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/settings) |
 | 8 | Internal and output resolution | The scene at its own resolution, with the interface and text sharp at the output resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
@@ -93,6 +96,9 @@ Below are the project's signature features and their current status. When each o
 | 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | Surround output and positioning | 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned sounds spread around the speakers by direction (an interim approach for the demo, to be replaced later by one faithful to the Nintendo Switch 2 Edition) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
 | 16 | Subtitles for the party's post-battle banter | The party's post-battle conversations have subtitles too | Nearly done |  |
+| 17 | Screen effects at the internal resolution | Screen effects with a fixed size (ambient occlusion, indirect light, bloom, translucent layers) scaled with the internal resolution, so they are no longer blurry or jagged at high resolutions; nothing changes at the game's original resolution | Planned |  |
+| 18 | Fonts that need no magnification at 4K | At 4K, the game's text is drawn without magnification, with clean strokes | Planned |  |
+| 19 | How to integrate the Nintendo Switch 2 Edition's additions | How to integrate what the Nintendo Switch 2 Edition adds into a recompilation of the original Switch version; each chapter is published separately in XC2-Recomp-Contributions | Planned |  |
 
 [开发日志／Development log](DEVLOG.md)
 
