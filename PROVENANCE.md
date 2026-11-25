@@ -180,3 +180,21 @@ Development snapshot recorded for this push. / 为本次推送记录的开发快
 - Private repository A HEAD: `c7296013b83522596e95c3e33329616c947ea21d`
 - Private repository B HEAD: `7133d373ad0df881b24c72ac2a7696fc109c97bb`
 - Bundle SHA-256: `d6930deb14dec80f851998fae8aa71764480dbc63d492a869edec6333c2eafc2`
+
+## 2026-11-23
+
+Development snapshot recorded when a fix was submitted upstream, with the submitted commits and the upstream commits that adopted it. / 向上游提交修正时记录的开发快照，附提交的 commit 与上游采纳的 commit。
+
+- Private repository A HEAD: `970a3c36a4e371d3bfdf4b13ea1a1b3dd30f8767`
+- Private repository B HEAD: `629887396bf4a3746bcae6003cba5b1858658852`
+- Bundle SHA-256: `ea70d822a34c66f791ba8dea892dd321cd14a50bdaaf581aba6c29606c49fcbd`
+- Submitted commits: `838f5a0fb7f3ce7517a5925d07864d242879198c`, `aaa3bb0b84125d385ac9be9e036c22e754cab744`
+- Upstream commits: `2f0210dba97cd69de04f56c34ce8610f870fe2d8`, `f856c78d578fcd9f55a5cfb2368d10fa65eb6102`
+
+## 2026-11-26
+
+Development snapshot recorded for this push. / 为本次推送记录的开发快照。
+
+- Private repository A HEAD: `9d8f1d043132d2444b17b3091630f96a538ee626`
+- Private repository B HEAD: `53975eb44ccf6f1adc1495cf247243d8cec15e19`
+- Bundle SHA-256: `c82acbc1678111b44e00a532d9c0713848e1f89a25661c6ac5103eb2066e89d1`

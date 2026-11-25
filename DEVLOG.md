@@ -4,6 +4,67 @@
 
 A daily record of what changed: problems fixed, features added, and what is still being looked into. Anything not yet confirmed in hands-on play is marked as awaiting hands-on testing.
 
+## 2026-11-26
+
+### 简体中文
+
+这一篇包括 2026-11-22 那次更新之后、到 2026-11-24 合并的项目。
+
+#### 更正
+
+- **冲刺**：2026-11-20 那篇写的「实机试玩已确认」说得太满。冲刺可以用，但「跑步动作也跟着调整，不会滑步」没有在实机试玩中确认过；跑步动作还在调整。
+
+#### 已解决的问题
+
+- 部分场景的植被出现黑色碎片（2026-11-13 记下的）：草地会出现黑色的条纹和黑块，有时一团黑色还会跟着角色移动。现在草地正常显示。已合并，等待实机验证。
+- 在古拉，画面有时会整个损坏、几乎全黑：找到的原因是一次上传的数据太多时，会盖掉还在使用的部分。现在不会盖掉了。已合并，等待实机验证。
+- 过场切换镜头时，偶尔有一帧会把新镜头的角色画在旧镜头里：找到的原因已经修正；锁在 30 fps 时，画面也照固定的间隔送出。已合并，等待实机验证。
+- 战斗后队友对话的字幕出现得太晚、字太大（2026-11-20 记下的）：现在语音开始时就显示，字变小并移到画面上方，打开游戏菜单时隐藏。已合并，等待实机验证。
+- 在设置里切换抗锯齿或超分辨率的那一刻，有一帧可能读到不一致的状态。这是读程序时发现的，画面上没有见过；已修正，由自动测试确认。
+
+#### 新加入的功能（已合并，等待实机验证）
+
+- **文字语言**：在「显示设置」里选择日文、繁体中文、简体中文或韩文，重新启动游戏后生效（语音维持日文）。第一次启动、还没有设置存档时，仍由游戏自己的选语言画面决定。
+- **冲刺的效果**：冲刺时镜头视野稍微变宽，起跑时扬起尘土，动态模糊跟着玩家的设置。冲刺默认关闭，跑步动作还在调整。
+- **设置的位置**：冲刺的开关移到游戏原本的游戏设定分页，战斗后队友对话的字幕也在那一页新增了一行；手柄的冲刺按键移到手柄的改键页；声音输出和环绕定位收进声音分页的「声音输出」一行，按下后打开。
+
+### English
+
+This entry covers items merged after the 2026-11-22 update, up to 2026-11-24.
+
+#### Correction
+
+- **Sprint**: the 2026-11-20 entry's "Confirmed in hands-on play" said too much. The sprint works, but "the running
+  animation adjusted so the feet do not slide" was not confirmed in hands-on play; the running animation is still being
+  tuned.
+
+#### Fixed
+
+- Black fragments in the foliage of some scenes (noted on 2026-11-13): grass could show black streaks and black patches,
+  and a black patch could follow the character. Grass now draws normally. Merged, awaiting hands-on testing.
+- In Gormott, the whole picture could break and turn almost black: the cause found is that, when too much data was
+  uploaded at once, parts still in use were overwritten. They no longer are. Merged, awaiting hands-on testing.
+- When a cutscene cut to another camera, one frame now and then showed the new shot's characters in the old shot: the
+  cause found is fixed, and at a 30 fps cap the frames are also sent at a fixed interval. Merged, awaiting hands-on
+  testing.
+- The subtitles for the party's post-battle banter appeared too late and were too large (noted on 2026-11-20): they now
+  appear when the voice starts, are smaller, sit at the top of the screen, and hide while a game menu is open. Merged,
+  awaiting hands-on testing.
+- At the moment anti-aliasing or super resolution was switched in the settings, one frame could read an inconsistent
+  state. This was found by reading the code and never seen on screen; it is fixed, confirmed by an automatic test.
+
+#### New (merged, awaiting hands-on testing)
+
+- **Text language**: choose Japanese, Traditional Chinese, Simplified Chinese or Korean on the display settings page; it
+  takes effect after restarting the game (voices stay Japanese). On a first start with no settings save yet, the game's
+  own language screen still decides.
+- **Sprint effects**: while sprinting, the camera's field of view widens slightly, dust is kicked up at the start, and
+  motion blur follows the player's setting. The sprint is off by default, and its running animation is still being
+  tuned.
+- **Where the settings are**: the sprint's switch moved to the game's own game settings page, where the post-battle
+  banter subtitles also have a new row; the controller's sprint button moved to the controller's button page; sound
+  output and surround placement are now behind one Sound Output row on the game's sound page.
+
 ## 2026-11-22
 
 ### 简体中文
