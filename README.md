@@ -62,8 +62,8 @@ The source code is not public because this is, first of all, something I'm makin
 | 8 | 内部与输出分辨率 | 场景使用独立的分辨率，界面和文字直接以输出分辨率绘制 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | 存档保护与崩溃报告 | 写入途中崩溃也能恢复的存档、自动备份，以及易读的崩溃报告 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | 鼠标操作菜单 | 在游戏原本的菜单里指向、点击和滚动（剧情对话里的选项框等少数画面还不支持） | 接近完成 |  |
-| 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示 | 已实现（操作说明图仍是手柄图） |  |
-| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex | 已实现（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认） |  |
+| 11 | 按情境变化的键鼠操作 | 按键在不同情境下符合 PC 玩家的习惯，并显示键盘提示（操作说明图仍是手柄图） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/keyboard-mouse) |
+| 12 | 帧生成与 Reflex | NVIDIA DLSS 多帧生成、AMD FSR 帧生成与 NVIDIA Reflex（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认；FSR 帧生成在过场中还没有实机确认） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/frame-generation) |
 | 13 | 改设置不用重开 | 画面、超分辨率、帧生成、HDR 和声音输出等设置，在游戏里改了马上生效（文字语言要重新启动游戏） | 已实现 |  |
 | 14 | 内部分辨率较高时的 TAA | 场景以高于游戏原本的分辨率渲染时，游戏原本的 TAA 仍然能让静止的边缘平滑 | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | 环绕输出与定位 | 跟随 Windows 喇叭设置的 5.1 与 7.1 输出，并按声音的方向把游戏里有方向的声音分配到周围的喇叭（展示版的过渡做法，之后换成忠于 Nintendo Switch 2 Edition 的做法） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
@@ -71,6 +71,7 @@ The source code is not public because this is, first of all, something I'm makin
 | 17 | 画面效果跟着内部分辨率放大 | 固定尺寸的画面效果（环境光遮蔽、间接光、光晕、半透明层）跟着内部分辨率放大，高分辨率下不再模糊、不再有锯齿；在游戏原本的分辨率下画面不变 | 开发中 |  |
 | 18 | 4K 下不必放大的字体 | 在 4K 下，游戏的文字不必放大，笔画清晰 | 开发中 |  |
 | 19 | 整合 Nintendo Switch 2 Edition 新增内容的方法 | 把 Nintendo Switch 2 Edition 新增的内容整合进原版 Switch 重编译的方法；各章分开发布在 XC2-Recomp-Contributions | 计划中 |  |
+| 20 | 超分辨率与抗锯齿 | 以 NVIDIA DLSS 超分辨率或 AMD FSR 超分辨率提升分辨率；不使用超分辨率时，用游戏原本的 TAA 或关闭抗锯齿（在 NVIDIA 显卡上确认；AMD 与 Intel 显卡未测试） | 指南已发布 | [指⁠南](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/upscalers) |
 
 ## Giving back
 
@@ -90,8 +91,8 @@ Below are the project's signature features and their current status. Finished it
 | 8 | Internal and output resolution | The scene at its own resolution, with the interface and text drawn directly at the output resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/resolution) |
 | 9 | Save protection and crash reports | Saves that survive a crash during writing, automatic backups, and a readable crash report | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/saves) |
 | 10 | Mouse in menus | Pointing, clicking and scrolling in the game's own menus (a few screens, such as the choice boxes in story dialogue, are not supported yet) | Nearly done |  |
-| 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts | Implemented (the control help pictures still show controller art) |  |
-| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex | Implemented (DLSS 2x to 6x, FSR Frame Generation and switching frame generation without a restart confirmed in hands-on play) |  |
+| 11 | Context-aware keyboard and mouse | Keys that mean what a PC player expects in each situation, with keyboard prompts (the control help pictures still show controller art) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/keyboard-mouse) |
+| 12 | Frame generation and Reflex | NVIDIA DLSS Multi Frame Generation, AMD FSR Frame Generation and NVIDIA Reflex (DLSS 2x to 6x, FSR Frame Generation and switching frame generation without a restart confirmed in hands-on play; FSR Frame Generation in cutscenes not confirmed in hands-on play yet) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/frame-generation) |
 | 13 | Settings without a restart | Graphics, super resolution, frame generation, HDR, sound output and other settings take effect at once when changed in the game (the text language needs a restart) | Implemented |  |
 | 14 | TAA at a higher internal resolution | The game's original TAA smooths still edges even when the scene renders above the game's original resolution | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/taa-jitter) |
 | 15 | Surround output and positioning | 5.1 and 7.1 output that follows the Windows speaker setup, and the game's positioned sounds spread around the speakers by direction (an interim approach for the demo, to be replaced later by one faithful to the Nintendo Switch 2 Edition) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/surround) |
@@ -99,6 +100,7 @@ Below are the project's signature features and their current status. Finished it
 | 17 | Screen effects at the internal resolution | Screen effects with a fixed size (ambient occlusion, indirect light, bloom, translucent layers) scaled with the internal resolution, so they are no longer blurry or jagged at high resolutions; nothing changes at the game's original resolution | In development |  |
 | 18 | Fonts that need no magnification at 4K | At 4K, the game's text is drawn without magnification, with clean strokes | In development |  |
 | 19 | How to integrate the Nintendo Switch 2 Edition's additions | How to integrate what the Nintendo Switch 2 Edition adds into a recompilation of the original Switch version; each chapter is published separately in XC2-Recomp-Contributions | Planned |  |
+| 20 | Super resolution and anti-aliasing | Upscaling with NVIDIA DLSS Super Resolution or AMD FSR Super Resolution; without an upscaler, the game's original TAA, or off (confirmed on an NVIDIA card; AMD and Intel cards not tested) | Guide published | [Guide](https://github.com/circerio/XC2-Recomp-Contributions/tree/main/guides/upscalers) |
 
 [开发日志／Development log](DEVLOG.md)
 
