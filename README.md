@@ -198,7 +198,7 @@ features and adds the final form this research aims for, and long-term ideas.
 - Separate switches to turn off depth of field and motion blur
 - Frame generation with NVIDIA DLSS Multi Frame Generation or AMD FSR Frame Generation, applied to the whole game, to
   cutscenes only, or to everything except cutscenes (DLSS 2x to 6x, FSR Frame Generation and switching frame generation
-  without a restart confirmed in hands-on play)
+  without a restart confirmed in hands-on play; FSR Frame Generation in cutscenes not confirmed in hands-on play yet)
 
 **Performance**
 
@@ -323,11 +323,11 @@ features and adds the final form this research aims for, and long-term ideas.
 
 #### Planned: long-term ideas
 
-Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life mods, optional
-gameplay mods, system mods, ray-traced shadows and dynamic sun shadows (research), and how to integrate the Nintendo
-Switch 2 Edition's additions (see the top of this page). Every enhancement that changes gameplay or balance will be
-optional. Classic mode turns on no enhancements; in Enhanced mode, each enhancement that changes the rules can be turned
-on or off separately.
+Beyond the features above, the [roadmap](ROADMAP.md) lists ideas with no timeline: quality-of-life features, optional
+gameplay features, system features, ray-traced shadows and dynamic sun shadows (research), and how to integrate the
+Nintendo Switch 2 Edition's additions (see the top of this page). Every enhancement that changes gameplay or balance
+will be optional. Classic mode turns on no enhancements; in Enhanced mode, each enhancement that changes the rules can
+be turned on or off separately.
 
 ### Distribution
 
@@ -430,7 +430,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 - 材质等级设置
 - 各向异性过滤设置
 - 景深与动态模糊可以分别关闭
-- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏、只在过场动画中，或过场以外（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认）
+- 以 NVIDIA DLSS 多帧生成或 AMD FSR 帧生成补帧，可以应用到整个游戏、只在过场动画中，或过场以外（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认；FSR 帧生成在过场中还没有实机确认）
 
 **性能**
 
@@ -527,7 +527,7 @@ Monado 在 Nintendo Switch 游戏原生 PC 移植方面所取得的成果，给�
 
 #### 目标：长期构想
 
-除上述功能外，[路线图](ROADMAP.md)还列出没有时间表的构想：减少繁琐操作的优化 Mod、可选的玩法 Mod、系统 Mod、
+除上述功能外，[路线图](ROADMAP.md)还列出没有时间表的构想：减少繁琐操作的优化功能、可选的玩法功能、系统功能、
 光线追踪阴影和动态光影（研究方向），以及整合 Nintendo Switch 2 Edition 新增内容的方法（见本页开头）。
 所有会改变玩法或平衡的增强功能都是可选的。经典模式不开启任何增强功能；增强模式里会改变规则的增强功能都可以单独开关。
 

@@ -23,7 +23,7 @@ Features are listed in three groups: Implemented, Nearly done and Planned.
 - Switches for depth of field and motion blur
 - NVIDIA DLSS Multi Frame Generation and AMD FSR Frame Generation, for the whole game, for cutscenes only or for
   everything except cutscenes (DLSS 2x to 6x, FSR Frame Generation and switching frame generation without a restart
-  confirmed in hands-on play)
+  confirmed in hands-on play; FSR Frame Generation in cutscenes not confirmed in hands-on play yet)
 - 60 fps and higher in the first town; other areas, battles and events stay at 30 fps for now (30 by default, chosen in
   the settings)
 - V-sync and frame rate caps (30 / 60 / 120 / 144 / 165 / unlimited; above 30, only in the first town for now; with
@@ -117,7 +117,7 @@ These ideas have no timeline and are not commitments. They show where the projec
 **Principle:** every enhancement that changes gameplay or balance is optional. Classic mode turns on no enhancements; in
 Enhanced mode, each enhancement that changes the rules can be turned on or off separately.
 
-#### Quality-of-life mods
+#### Quality-of-life features
 
 Fewer repetitive steps and menu trips. Representative directions:
 
@@ -134,7 +134,7 @@ Fewer repetitive steps and menu trips. Representative directions:
 - Faster menus
 - Separate mix controls for music, voices and sound effects
 
-#### Gameplay mods (all optional)
+#### Gameplay features (all optional)
 
 - An optional pity system for Blade pulls
 - A combat tutorial you can replay and practise
@@ -143,7 +143,7 @@ Fewer repetitive steps and menu trips. Representative directions:
 - Randomizer
 - New challenge modes
 
-#### System mods
+#### System features
 
 - Save rollback
 - UI safe area and font scaling for ultrawide screens such as 21:9
@@ -181,7 +181,7 @@ extract this data, and will not show its screenshots or official promotional art
 - 材质等级设置
 - 各向异性过滤设置
 - 景深与动态模糊开关
-- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏、只在过场动画中，或过场以外（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认）
+- NVIDIA DLSS 多帧生成与 AMD FSR 帧生成，可以应用到整个游戏、只在过场动画中，或过场以外（DLSS 2 至 6 倍、FSR 帧生成，以及帧生成的即时切换已实机确认；FSR 帧生成在过场中还没有实机确认）
 - 第一个城镇里 60 fps 以上；其他地方、战斗和事件暂时维持 30 fps（默认 30，在设置里选择）
 - 垂直同步与锁帧档位（30／60／120／144／165／不限；30 以上目前只在第一个城镇生效；开帧生成时按显示的帧数计算）
 - 可变刷新率（在 G-SYNC Compatible 显示器上确认；AMD FreeSync 未测试）
@@ -245,7 +245,7 @@ extract this data, and will not show its screenshots or official promotional art
 
 **原则**：所有会改变玩法或平衡的增强功能都是可选的。经典模式不开启任何增强功能；增强模式里会改变规则的增强功能都可以单独开关。
 
-#### 优化 Mod
+#### 优化功能
 
 减少繁琐操作与来回切换菜单。代表性的方向：
 
@@ -262,7 +262,7 @@ extract this data, and will not show its screenshots or official promotional art
 - 菜单提速
 - 音乐、语音与音效分项混音
 
-#### 玩法 Mod（全部可选）
+#### 玩法功能（全部可选）
 
 - 可选的异刃抽取保底
 - 可重复练习的战斗教程
@@ -271,7 +271,7 @@ extract this data, and will not show its screenshots or official promotional art
 - 随机化
 - 新的挑战模式
 
-#### 系统 Mod
+#### 系统功能
 
 - 存档回滚
 - 21:9 等超宽屏的界面安全区与字体缩放
